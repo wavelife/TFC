@@ -1,0 +1,44 @@
+/*
+ * This is the file header for the printf module using UART output
+ * @Author: Carles Saura
+ */
+#include <stdint.h>
+#include <stdarg.h>
+/*-----------------------------------------------------------*/
+/*
+ * Simple function to init the baud rate and port of the UART.
+ */
+void printfStart( uint8_t  port, uint32_t baudrate);
+
+/*
+ * Simple function to write to the UART.
+ */
+void printfPrint(char* str, const char* format, ...);
+
+/*
+ * Simple function to format a string using va_list as a input.
+ */
+void printfVsprint(char* str, const char* format, va_list listPointer);
+
+/*
+ * Simple function to read from the UART.
+ */
+uint32_t printfScanscanf(char* string, uint32_t timeout);
+
+/*
+ * Simple function to (active) wait the amount of ms given in parameter 'ms.
+ */
+void delayMs( uint32_t ms);
+
+/*
+ * Simple function to lock the module.
+ * Return the unlock code
+ */
+uint32_t printfLock( uint32_t ms);
+
+/*
+ * Simple function to unlock the module.
+ * Return 1 if done, 0 otherwise
+ */
+uint8_t printfUnlock( uint32_t ms);
+/*-----------------------------------------------------------*/

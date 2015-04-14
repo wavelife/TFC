@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="FlashDialog">
+		<item value="250" key="id_speed"/>
+		<item value="false" key="erase_pages"/>
+		<item value="true" key="program_all"/>
+		<item value="false" key="erase"/>
+		<item value="false" key="jtag"/>
+		<item value="false" key="repeat"/>
+		<item value="false" key="program_pages"/>
+		<item value="true" key="erase_mass"/>
+		<item value="true" key="program"/>
+		<item value="/Users/wavelife/LPCXpresso/pfc/SimpleDemo_usingLib/Debug/SimpleDemo_usingLib.axf;/Users/wavelife/LPCXpresso/pfc/Example01/Debug/Example01.axf;/Users/wavelife/LPCXpresso/pfc/SimpleDemo/Debug/SimpleDemo.axf," key="file"/>
+		<item value="" key="base"/>
+		<item value="true" key="logFLag"/>
+		<item value="LPC175x_6x_512.cfx," key="flashdriver"/>
+		<item value="false" key="clipboard_exec"/>
+		<item value="true" key="exec"/>
+		<item value="false" key="clipboard"/>
+		<item value="false" key="reopen"/>
+	</section>
+</section>

@@ -1,0 +1,32 @@
+<!-- liblinks.xml
+
+     Code Red Technologies "Smart update wizard" script file
+     When executed on a particular application project, will
+     add appropriate links to the specified library project.
+
+     Note that this script assumes that the application project
+     contains the standard 'Debug' and 'Release' build 
+     configurations.
+-->
+
+<project name="" update="true">
+	<setting id="all.compiler.inc">
+		<value>${workspace_loc:/LPC1769_UOC_Library/inc}</value>
+        </setting>
+    <setting id="assembler.inc">
+		<value>${workspace_loc:/LPC1769_UOC_Library/inc}</value>
+    </setting>
+	<setting id="linker.libs">
+		<value>LPC1769_UOC_Library</value>
+	</setting>
+	<setting id="linker.paths" buildType="Debug">
+		<value>${workspace_loc:/LPC1769_UOC_Library/Debug}</value>
+	</setting>
+	<setting id="linker.paths" buildType="Release">
+		<value>${workspace_loc:/LPC1769_UOC_Library/Release}</value>
+	</setting>
+	<requires msg="Library project `LPC1769_UOC_Library` not found">
+		<value>LPC1769_UOC_Library</value>
+	</requires>
+</project>
+

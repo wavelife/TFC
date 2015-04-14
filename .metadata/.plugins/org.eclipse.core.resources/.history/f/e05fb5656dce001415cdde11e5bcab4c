@@ -1,0 +1,67 @@
+/*
+ * This is the file implementation for the led module
+ * @Author: Carles Saura
+ */
+
+#include "LPC17xx.h"
+#include "led.h"
+
+/*-----------------------------------------------------------*/
+
+/*
+ * Simple function to init the LED on the LPCXpresso LPC17xx board.
+ */
+void led_init( void )
+{
+	//LPC_PINCON->PINSEL1	&= ( ~( 3 << 12 ) );
+	//LPC_GPIO0->FIODIR |= ( 1 << mainLED_BIT );
+	GPIO_init(( ~( 3 << 12 ) ), ( 1 << mainLED_BIT ));
+}
+
+/*
+ * Simple function to turn the LED on.
+ */
+void led_on( void )
+{
+	/* Turn the LED on. */
+	//LPC_GPIO0->FIOCLR = ulLEDState & ( 1 << mainLED_BIT );
+	//LPC_GPIO0->FIOSET = ( ulLEDState  & ( 1 << mainLED_BIT ) );
+	GPIO_makeOut(( 1 << mainLED_BIT ), ( 1 << mainLED_BIT ));
+
+}
+
+/*
+ * Simple function to turn the LED off.
+ */
+void led_off( void )
+{
+	/* Turn the LED off. */
+	//LPC_GPIO0->FIOCLR = LPC_GPIO0->FIOPIN & ( 0 << mainLED_BIT );
+	//LPC_GPIO0->FIOSET = ( ( ~LPC_GPIO0->FIOPIN ) & ( 0 << mainLED_BIT ) );
+	GPIO_makeOut(( 1 << mainLED_BIT ), 0);
+}
+
+/*
+ * Simple function to toggle the LED.
+ */
+void led_toggle( void )
+{
+	unsigned long ulLEDState;
+
+	/* Obtain the current P0 state. */
+	ulLEDState = LPC_GPIO0->FIOPIN;
+	ulLEDState = GPIO_getState();
+
+	/* Turn the LED off if it was on, and on if it was off. */
+	if((ulLEDState & ( 1 << mainLED_BIT )) == 0)
+		led_off();
+	else led_on();
+
+	/* Turn the LED off if it was on, and on if it was off. */
+	LPC_GPIO0->FIOCLR = ulLEDState & ( 1 << mainLED_BIT );
+	LPC_GPIO0->FIOSET = ( ( ~ulLEDState ) & ( 1 << mainLED_BIT ) );
+	GPIO_makeOut(( 1 << mainLED_BIT ), 0);
+}
+/*-----------------------------------------------------------*/
+
+
