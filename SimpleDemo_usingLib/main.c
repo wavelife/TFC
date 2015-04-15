@@ -60,7 +60,7 @@ extern volatile uint8_t UART0Buffer, UART1Buffer, UART2Buffer, UART3Buffer;
 volatile uint32_t *main_lpc_uart_ier;
 volatile uint32_t *main_uart_count;
 volatile uint8_t *main_uart_buffer;
-uint8_t mainPort = 0;
+uint8_t mainPort = 3;
 int mainBaurade = 115200;
 int done = 0;
 
@@ -135,7 +135,7 @@ volatile unsigned long ul;
 			*main_uart_count = 0;
 			*main_lpc_uart_ier = IER_THRE | IER_RLS | IER_RBR;		/* Re-enable RBR */
 
-			done = 1; /* Prevent to execute again */
+			//done = 1; /* Prevent to execute again */
 			/* Delay for a period. */
 			for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
 			{

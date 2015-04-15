@@ -94,7 +94,7 @@ void printf_send(uint8_t port, char* str, int bufsz){
 	}
 }
 
-void Printf_print(uint8_t port, char* str, const char* format, ...){
+void Printf_print( uint8_t port, char* str, const char* format, ... ){
 	int bufsz;
 
 	va_list listPointer;
@@ -105,7 +105,7 @@ void Printf_print(uint8_t port, char* str, const char* format, ...){
 	printf_send( port, str, bufsz);
 }
 
-void Printf_vsprint(uint8_t port, char* str, const char* format, va_list listPointer){
+void Printf_vsprint( uint8_t port, char* str, const char* format, va_list listPointer ){
 	int bufsz;
 
 	bufsz = vsprintf(str, format, listPointer);
@@ -113,10 +113,10 @@ void Printf_vsprint(uint8_t port, char* str, const char* format, va_list listPoi
 }
 
 
-uint32_t Printf_scanf(uint8_t port, char* string, uint32_t timeout){
+uint32_t Printf_scanf( uint8_t port, char* string, uint32_t timeout ){
 	uint32_t oldCount = 0, newCount = 0;
 
-	Printf_start(port, uart_baudrate);
+	Printf_start( port, uart_baudrate );
 
 	if( *xSemUART != NULL ){
 		while( xSemaphoreTake( *xSemUART, ( portTickType ) 10 ) != pdTRUE ){}			/* Wait and protect the function from other invocations */
@@ -129,7 +129,7 @@ uint32_t Printf_scanf(uint8_t port, char* string, uint32_t timeout){
 			oldCount = newCount;
 			Printf_delayMs(5);
 			newCount = *uart_count;
-		}while(oldCount != newCount); // wait a little time while we have new chars
+		}while( oldCount != newCount ); // wait a little time while we have new chars
 		*lpc_uart_ier = IER_THRE | IER_RLS; // disable interrupt RX UART
 		if(newCount==0){
 			/* Give the Semphr and enable the function to others invocations */
@@ -137,7 +137,7 @@ uint32_t Printf_scanf(uint8_t port, char* string, uint32_t timeout){
 			strncpy(string, '\0', 1 );
 			return 0;
 		}
-		strncpy(string, (char*)uart_buffer, newCount );
+		strncpy( string, (char*)uart_buffer, newCount );
 		string[newCount] = 0; // add end string. Now we have a string
 		*uart_count = 0; // clean buff
 		*uart_buffer = '\0';

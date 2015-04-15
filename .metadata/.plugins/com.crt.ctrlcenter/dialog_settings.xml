@@ -10,12 +10,12 @@
 		<item value="false" key="program_pages"/>
 		<item value="true" key="erase_mass"/>
 		<item value="true" key="program"/>
-		<item value="/Users/wavelife/LPCXpresso/pfc/SimpleDemo_usingLib/Debug/SimpleDemo_usingLib.axf;/Users/wavelife/LPCXpresso/pfc/Example01/Debug/Example01.axf;/Users/wavelife/LPCXpresso/pfc/SimpleDemo/Debug/SimpleDemo.axf," key="file"/>
+		<item value="/Users/Carles/Documents/pfc/SimpleDemo_usingLib/Debug/SimpleDemo_usingLib.axf;/Users/wavelife/LPCXpresso/pfc/SimpleDemo_usingLib/Debug/SimpleDemo_usingLib.axf;/Users/wavelife/LPCXpresso/pfc/Example01/Debug/Example01.axf;/Users/wavelife/LPCXpresso/pfc/SimpleDemo/Debug/SimpleDemo.axf," key="file"/>
 		<item value="" key="base"/>
 		<item value="true" key="logFLag"/>
-		<item value="LPC175x_6x_512.cfx," key="flashdriver"/>
-		<item value="false" key="clipboard_exec"/>
 		<item value="true" key="exec"/>
+		<item value="false" key="clipboard_exec"/>
+		<item value="LPC175x_6x_512.cfx," key="flashdriver"/>
 		<item value="false" key="clipboard"/>
 		<item value="false" key="reopen"/>
 	</section>

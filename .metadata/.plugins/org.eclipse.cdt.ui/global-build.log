@@ -1,158 +1,25 @@
-09:07:47 **** Build of configuration Debug for project CMSISv2p00_LPC17xx ****
+13:08:08 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC17xx ****
 make -r all 
-Building file: ../src/core_cm3.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../inc -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/core_cm3.d" -MT"src/core_cm3.o" -MT"src/core_cm3.d" -o "src/core_cm3.o" "../src/core_cm3.c"
-Finished building: ../src/core_cm3.c
- 
-Building file: ../src/system_LPC17xx.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -I../inc -O0 -Os -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/system_LPC17xx.d" -MT"src/system_LPC17xx.o" -MT"src/system_LPC17xx.d" -o "src/system_LPC17xx.o" "../src/system_LPC17xx.c"
-Finished building: ../src/system_LPC17xx.c
- 
-Building target: libCMSISv2p00_LPC17xx.a
-Invoking: MCU Archiver
-arm-none-eabi-ar -r  "libCMSISv2p00_LPC17xx.a"  ./src/core_cm3.o ./src/system_LPC17xx.o   
-arm-none-eabi-ar: creating libCMSISv2p00_LPC17xx.a
-Finished building target: libCMSISv2p00_LPC17xx.a
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size libCMSISv2p00_LPC17xx.a ; # arm-none-eabi-objdump -h -S libCMSISv2p00_LPC17xx.a >libCMSISv2p00_LPC17xx.lss
-   text	   data	    bss	    dec	    hex	filename
-      0	      0	      0	      0	      0	core_cm3.o (ex libCMSISv2p00_LPC17xx.a)
-    328	      4	      0	    332	    14c	system_LPC17xx.o (ex libCMSISv2p00_LPC17xx.a)
- 
-09:07:47 **** Build of configuration Debug for project FreeRTOS_Library ****
+make: Nothing to be done for `all'.
+13:08:08 **** Incremental Build of configuration Debug for project FreeRTOS_Library ****
 make -r all 
-Building file: ../portable/heap_2.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/include" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/portable" -I"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/demo_code" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"portable/heap_2.d" -MT"portable/heap_2.o" -MT"portable/heap_2.d" -o "portable/heap_2.o" "../portable/heap_2.c"
-Finished building: ../portable/heap_2.c
- 
-Building file: ../portable/port.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/include" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/portable" -I"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/demo_code" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"portable/port.d" -MT"portable/port.o" -MT"portable/port.d" -o "portable/port.o" "../portable/port.c"
-Finished building: ../portable/port.c
- 
-Building file: ../demo_code/basic_io.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/include" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/portable" -I"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/demo_code" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"demo_code/basic_io.d" -MT"demo_code/basic_io.o" -MT"demo_code/basic_io.d" -o "demo_code/basic_io.o" "../demo_code/basic_io.c"
-Finished building: ../demo_code/basic_io.c
- 
-Building file: ../demo_code/consoleprint.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/include" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/portable" -I"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/demo_code" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"demo_code/consoleprint.d" -MT"demo_code/consoleprint.o" -MT"demo_code/consoleprint.d" -o "demo_code/consoleprint.o" "../demo_code/consoleprint.c"
-Finished building: ../demo_code/consoleprint.c
- 
-Building file: ../croutine.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/include" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/portable" -I"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/demo_code" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"croutine.d" -MT"croutine.o" -MT"croutine.d" -o "croutine.o" "../croutine.c"
-Finished building: ../croutine.c
- 
-Building file: ../list.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/include" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/portable" -I"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/demo_code" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"list.d" -MT"list.o" -MT"list.d" -o "list.o" "../list.c"
-Finished building: ../list.c
- 
-Building file: ../queue.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/include" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/portable" -I"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/demo_code" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"queue.d" -MT"queue.o" -MT"queue.d" -o "queue.o" "../queue.c"
-Finished building: ../queue.c
- 
-Building file: ../tasks.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/include" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/portable" -I"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/demo_code" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"tasks.d" -MT"tasks.o" -MT"tasks.d" -o "tasks.o" "../tasks.c"
-Finished building: ../tasks.c
- 
-Building file: ../timers.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/include" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/portable" -I"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/demo_code" -O1 -g3 -Wall -c -fmessage-length=0 -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"timers.d" -MT"timers.o" -MT"timers.d" -o "timers.o" "../timers.c"
-Finished building: ../timers.c
- 
-Building target: libFreeRTOS_Library.a
-Invoking: MCU Archiver
-arm-none-eabi-ar -r  "libFreeRTOS_Library.a"  ./portable/heap_2.o ./portable/port.o  ./demo_code/basic_io.o ./demo_code/consoleprint.o  ./croutine.o ./list.o ./queue.o ./tasks.o ./timers.o   
-arm-none-eabi-ar: creating libFreeRTOS_Library.a
-Finished building target: libFreeRTOS_Library.a
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size libFreeRTOS_Library.a ; # arm-none-eabi-objdump -h -S libFreeRTOS_Library.a >libFreeRTOS_Library.lss
-   text	   data	    bss	    dec	    hex	filename
-    284	      4	  19480	  19768	   4d38	heap_2.o (ex libFreeRTOS_Library.a)
-    308	      4	      0	    312	    138	port.o (ex libFreeRTOS_Library.a)
-     88	      0	     52	    140	     8c	basic_io.o (ex libFreeRTOS_Library.a)
-     20	      0	      0	     20	     14	consoleprint.o (ex libFreeRTOS_Library.a)
-    668	      0	    128	    796	    31c	croutine.o (ex libFreeRTOS_Library.a)
-    156	      0	      0	    156	     9c	list.o (ex libFreeRTOS_Library.a)
-   1396	      0	      0	   1396	    574	queue.o (ex libFreeRTOS_Library.a)
-   3116	      4	    308	   3428	    d64	tasks.o (ex libFreeRTOS_Library.a)
-      0	      0	      0	      0	      0	timers.o (ex libFreeRTOS_Library.a)
- 
-09:07:49 **** Build of configuration Debug for project LPC1769_UOC_Library ****
+make: Nothing to be done for `all'.
+13:08:08 **** Incremental Build of configuration Debug for project LPC1769_UOC_Library ****
 make -r all 
-Building file: ../src/gpio.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSISv2p00_LPC17xx -D__LPC17XX__ -I"/Users/wavelife/Documents/UOC/TFC/pfc/LPC1769_UOC_Library/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/include" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/portable" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/gpio.d" -MT"src/gpio.o" -MT"src/gpio.d" -o "src/gpio.o" "../src/gpio.c"
-Finished building: ../src/gpio.c
- 
-Building file: ../src/led.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSISv2p00_LPC17xx -D__LPC17XX__ -I"/Users/wavelife/Documents/UOC/TFC/pfc/LPC1769_UOC_Library/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/include" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/portable" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/led.d" -MT"src/led.o" -MT"src/led.d" -o "src/led.o" "../src/led.c"
-Finished building: ../src/led.c
- 
-Building file: ../src/log.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSISv2p00_LPC17xx -D__LPC17XX__ -I"/Users/wavelife/Documents/UOC/TFC/pfc/LPC1769_UOC_Library/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/include" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/portable" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/log.d" -MT"src/log.o" -MT"src/log.d" -o "src/log.o" "../src/log.c"
-Finished building: ../src/log.c
- 
-Building file: ../src/printf.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSISv2p00_LPC17xx -D__LPC17XX__ -I"/Users/wavelife/Documents/UOC/TFC/pfc/LPC1769_UOC_Library/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/include" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/portable" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/printf.d" -MT"src/printf.o" -MT"src/printf.d" -o "src/printf.o" "../src/printf.c"
-Finished building: ../src/printf.c
- 
-Building file: ../src/uart.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M3 -D__USE_CMSIS=CMSISv2p00_LPC17xx -D__LPC17XX__ -I"/Users/wavelife/Documents/UOC/TFC/pfc/LPC1769_UOC_Library/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/include" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/portable" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart.d" -MT"src/uart.o" -MT"src/uart.d" -o "src/uart.o" "../src/uart.c"
-Finished building: ../src/uart.c
- 
-Building target: libLPC1769_UOC_Library.a
-Invoking: MCU Archiver
-arm-none-eabi-ar -r  "libLPC1769_UOC_Library.a"  ./src/gpio.o ./src/led.o ./src/log.o ./src/printf.o ./src/uart.o   
-arm-none-eabi-ar: creating libLPC1769_UOC_Library.a
-Finished building target: libLPC1769_UOC_Library.a
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "libLPC1769_UOC_Library.a" ; # arm-none-eabi-objdump -h -S "libLPC1769_UOC_Library.a" >"libLPC1769_UOC_Library.lss"
-   text	   data	    bss	    dec	    hex	filename
-    112	      0	      0	    112	     70	gpio.o (ex libLPC1769_UOC_Library.a)
-     96	      0	      0	     96	     60	led.o (ex libLPC1769_UOC_Library.a)
-    228	      1	      0	    229	     e5	log.o (ex libLPC1769_UOC_Library.a)
-    884	      4	     16	    904	    388	printf.o (ex libLPC1769_UOC_Library.a)
-   1972	      4	     16	   1992	    7c8	uart.o (ex libLPC1769_UOC_Library.a)
- 
-09:07:51 **** Build of configuration Debug for project SimpleDemo_usingLib ****
+make: Nothing to be done for `all'.
+13:08:09 **** Incremental Build of configuration Debug for project SimpleDemo_usingLib ****
 make -r all 
-Building file: ../cr_startup_lpc17.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv2p00_LPC17xx -D__CODE_RED -D__REDLIB__ -I"/Users/wavelife/Documents/UOC/TFC/pfc/LPC1769_UOC_Library" -I"/Users/wavelife/Documents/UOC/TFC/pfc/LPC1769_UOC_Library/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/LPC1769_UOC_Library/src" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/include" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/portable" -I"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/SimpleDemo" -O0 -g3 -fsigned-char -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cr_startup_lpc17.d" -MT"cr_startup_lpc17.o" -MT"cr_startup_lpc17.d" -o "cr_startup_lpc17.o" "../cr_startup_lpc17.c"
-Finished building: ../cr_startup_lpc17.c
- 
-Building file: ../main.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv2p00_LPC17xx -D__CODE_RED -D__REDLIB__ -I"/Users/wavelife/Documents/UOC/TFC/pfc/LPC1769_UOC_Library" -I"/Users/wavelife/Documents/UOC/TFC/pfc/LPC1769_UOC_Library/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/LPC1769_UOC_Library/src" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/include" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/portable" -I"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/SimpleDemo" -O0 -g3 -fsigned-char -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"main.d" -MT"main.o" -MT"main.d" -o "main.o" "../main.c"
-Finished building: ../main.c
- 
-Building target: SimpleDemo_usingLib.axf
+make: Nothing to be done for `all'.
+13:08:54 **** Incremental Build of configuration Debug for project Example01 ****
+make -r all 
+Building target: Example01.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug" -L"/Users/wavelife/Documents/UOC/TFC/pfc/LPC1769_UOC_Library/Debug" -L"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug" -Xlinker --gc-sections -Xlinker -Map=SimpleDemo_usingLib.map -mcpu=cortex-m3 -mthumb -T "SimpleDemo_Debug.ld" -o "SimpleDemo_usingLib.axf"  ./cr_startup_lpc17.o ./main.o   -lLPC1769_UOC_Library -lCMSISv2p00_LPC17xx -lFreeRTOS_Library
-Finished building target: SimpleDemo_usingLib.axf
+arm-none-eabi-gcc -nostdlib -L"/Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug" -L"/Users/Carles/Documents/pfc/FreeRTOS_Library/Debug" -Xlinker --gc-sections -Xlinker -Map=Example01.map -mcpu=cortex-m3 -mthumb -T "Example01_0_Debug.ld" -o "Example01.axf"  ./cr_startup_lpc17.o ./log.o ./main.o ./printf.o ./uart.o   -lCMSISv2p00_LPC17xx -lFreeRTOS_Library
+Finished building target: Example01.axf
  
 make --no-print-directory post-build
 Performing post-build steps
-arm-none-eabi-size SimpleDemo_usingLib.axf; # arm-none-eabi-objcopy -O ihex SimpleDemo_usingLib.axf SimpleDemo_usingLib.hex ;
+arm-none-eabi-size Example01.axf; # arm-none-eabi-objcopy -O ihex Example01.axf Example01.hex ;
    text	   data	    bss	    dec	    hex	filename
-  20672	     32	  20548	  41252	   a124	SimpleDemo_usingLib.axf
+  19512	     28	  20552	  40092	   9c9c	Example01.axf
  
