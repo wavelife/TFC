@@ -1,25 +1,38 @@
-13:08:08 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC17xx ****
+21:30:47 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC17xx ****
 make -r all 
 make: Nothing to be done for `all'.
-13:08:08 **** Incremental Build of configuration Debug for project FreeRTOS_Library ****
+21:30:48 **** Incremental Build of configuration Debug for project FreeRTOS_Library ****
 make -r all 
 make: Nothing to be done for `all'.
-13:08:08 **** Incremental Build of configuration Debug for project LPC1769_UOC_Library ****
+21:30:49 **** Incremental Build of configuration Debug for project Example01 ****
 make -r all 
-make: Nothing to be done for `all'.
-13:08:09 **** Incremental Build of configuration Debug for project SimpleDemo_usingLib ****
-make -r all 
-make: Nothing to be done for `all'.
-13:08:54 **** Incremental Build of configuration Debug for project Example01 ****
-make -r all 
+Building file: ../log.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__REDLIB__ -I"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/demo_code" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/include" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/portable" -I"/Users/wavelife/Documents/UOC/TFC/pfc/Example01/inc" -O1 -g3 -fsigned-char -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"log.d" -MT"log.o" -MT"log.d" -o "log.o" "../log.c"
+Finished building: ../log.c
+ 
+Building file: ../main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__REDLIB__ -I"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/demo_code" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/include" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/portable" -I"/Users/wavelife/Documents/UOC/TFC/pfc/Example01/inc" -O1 -g3 -fsigned-char -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"main.d" -MT"main.o" -MT"main.d" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
 Building target: Example01.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"/Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug" -L"/Users/Carles/Documents/pfc/FreeRTOS_Library/Debug" -Xlinker --gc-sections -Xlinker -Map=Example01.map -mcpu=cortex-m3 -mthumb -T "Example01_0_Debug.ld" -o "Example01.axf"  ./cr_startup_lpc17.o ./log.o ./main.o ./printf.o ./uart.o   -lCMSISv2p00_LPC17xx -lFreeRTOS_Library
+arm-none-eabi-gcc -nostdlib -L"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug" -L"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug" -Xlinker --gc-sections -Xlinker -Map=Example01.map -mcpu=cortex-m3 -mthumb -T "Example01_0_Debug.ld" -o "Example01.axf"  ./cr_startup_lpc17.o ./log.o ./main.o ./printf.o ./uart.o   -lCMSISv2p00_LPC17xx -lFreeRTOS_Library
 Finished building target: Example01.axf
  
 make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size Example01.axf; # arm-none-eabi-objcopy -O ihex Example01.axf Example01.hex ;
    text	   data	    bss	    dec	    hex	filename
-  19512	     28	  20552	  40092	   9c9c	Example01.axf
+  19800	     36	  20540	  40376	   9db8	Example01.axf
  
+21:31:28 **** Incremental Build of configuration Debug for project CMSISv2p00_LPC17xx ****
+make -r all 
+make: Nothing to be done for `all'.
+21:31:29 **** Incremental Build of configuration Debug for project FreeRTOS_Library ****
+make -r all 
+make: Nothing to be done for `all'.
+21:31:30 **** Incremental Build of configuration Debug for project Example01 ****
+make -r all 
+make: Nothing to be done for `all'.

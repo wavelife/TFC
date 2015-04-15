@@ -31,7 +31,9 @@
 */
 
 /* FreeRTOS.org includes. */
-#include "FreeRTOS.h"
+#ifndef INC_FREERTOS_H
+	#include "FreeRTOS.h"
+#endif
 #include "task.h"
 /* Includes for testing */
 #include <string.h>
@@ -41,7 +43,7 @@
 #include "log.h"
 
 /* Demo includes. */
-#include "basic_io.h"
+//#include "basic_io.h"
 
 /* Used as a loop counter to create a very crude delay. */
 #define mainDELAY_LOOP_COUNT		( 0xfffff )
@@ -58,14 +60,15 @@ extern volatile uint8_t UART0Buffer, UART1Buffer, UART2Buffer, UART3Buffer;
 volatile uint32_t *main_lpc_uart_ier;
 volatile uint32_t *main_uart_count;
 volatile uint8_t *main_uart_buffer;
-int mainPort = 3;
+uint8_t mainPort = 3;
 int mainBaurade = 115200;
+int done = 0;
 
 /*-----------------------------------------------------------*/
 
 int main( void )
 {
-	/* Init the semi-hosting. This is only to debug */
+	/* Init the semi-hosting. This is to debug only */
 	printf( "\n" );
 
 	/* Setting global poniters */
@@ -89,23 +92,18 @@ int main( void )
 		break;
 	}
 
-
-	/* Create one of the two tasks. */
-	//xTaskCreate(	test1,		/* Pointer to the function that implements the task. */
-	//				"Test 1",	/* Text name for the task.  This is to facilitate debugging only. */
-	//				240,		/* Stack depth in words. */
-	//				NULL,		/* We are not using the task parameter. */
-	//				1,			/* This task will run at priority 1. */
-	//				NULL );		/* We are not using the task handle. */
+	/* Create the other task in exactly the same way as last. */
+	xTaskCreate( test1, "Test 1", 240, NULL, 1, NULL );
 
 	/* Create the other task in exactly the same way as last. */
-	xTaskCreate( test2, "Test 2", 240, NULL, 1, NULL );
+	//xTaskCreate( test2, "Test 2", 240, NULL, 1, NULL );
 
 	/* Create the other task in exactly the same way as last. */
-	xTaskCreate( test4, "Test 4", 240, NULL, 1, NULL );
+	//xTaskCreate( test3, "Test 3", 240, NULL, 1, NULL );
 
 	/* Create the other task in exactly the same way as last. */
-	xTaskCreate( test3, "Test 3", 240, NULL, 1, NULL );
+	//xTaskCreate( test4, "Test 4", 240, NULL, 1, NULL );
+
 
 	/* Start the scheduler so our tasks start executing. */
 	vTaskStartScheduler();
@@ -127,45 +125,54 @@ volatile unsigned long ul;
 	int myiter;
 	for( myiter = 0;;myiter++ )
 	{
-		/* Starting */
-		UARTInit(mainPort, mainBaurade);
-		/* Print out the name of this test using UART. */
-		*main_lpc_uart_ier = IER_THRE | IER_RLS;				/* Disable RBR */
-		UARTSend(mainPort, (uint8_t *)text , strlen(text) );
-		*main_uart_count = 0;
-		*main_lpc_uart_ier = IER_THRE | IER_RLS | IER_RBR;		/* Re-enable RBR */
-
-		/* Delay for a period. */
-		for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
+		//if( done == 0 ) /* this test is only executed one time */
 		{
-			/* This loop is just a very crude delay implementation.  There is
-			nothing to do in here.  Later exercises will replace this crude
-			loop with a proper delay/sleep function. */
+			/* Starting */
+			UARTInit(mainPort, mainBaurade);
+			/* Print out the name of this test using UART. */
+			*main_lpc_uart_ier = IER_THRE | IER_RLS;				/* Disable RBR */
+			UARTSend(mainPort, (uint8_t *)text , strlen(text) );
+			*main_uart_count = 0;
+			*main_lpc_uart_ier = IER_THRE | IER_RLS | IER_RBR;		/* Re-enable RBR */
+
+			//done = 1; /* Prevent to execute again */
+			/* Delay for a period. */
+			for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
+			{
+				/* This loop is just a very crude delay implementation.  There is
+				nothing to do in here.  Later exercises will replace this crude
+				loop with a proper delay/sleep function. */
+			}
 		}
 	}
 }
 /*-----------------------------------------------------------*/
 void test2( void *pvParameters )
 {
-const char *pcTaskName = "Test 2 (printfPrint) is running the iteration number: %d\n\n";
+const char *pcTaskName = "Test 2 (Printf_vsprint) is running the iteration number: %d\n\n";
 volatile unsigned long ul;
 
 	/* As per most tasks, this task is implemented in an infinite loop. */
 	int myiter;
 	for( myiter = 0;;myiter++ )
 	{
-		/* Initiate the UART port to print */
-		printfStart(mainPort, mainBaurade);
-		/* Print out the name of this test using PRINTF. */
-		char str[30];
-		printfPrint( str, pcTaskName, myiter );
-
-		/* Delay for a period. */
-		for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
+		if( done != 0 ) /* If Test 1 is done, then... */
 		{
-			/* This loop is just a very crude delay implementation.  There is
-			nothing to do in here.  Later exercises will replace this crude
-			loop with a proper delay/sleep function. */
+			/* Initiate the UART port to print */
+			Printf_start(mainPort, mainBaurade);
+			/* Print out the name of this test using PRINTF. */
+			char str[30];
+			Printf_print( mainPort, str, pcTaskName, myiter );
+			/* Give the Semphr */
+			//xSemaphoreGive( xSemaphore2 );
+
+			/* Delay for a period. */
+			for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
+			{
+				/* This loop is just a very crude delay implementation.  There is
+				nothing to do in here.  Later exercises will replace this crude
+				loop with a proper delay/sleep function. */
+			}
 		}
 	}
 }
@@ -175,8 +182,7 @@ void test3( void *pvParameters )
 {
 const char *text1 = "\nTest 3 (printfScan) iteration: %d - Introduce some char...\n";
 const char *text2 = " returned count: %d text is:\n";
-const char *text3 = "\n";
-char received[40];;
+char received[80] = "\0";
 volatile unsigned long ul;
 
 	/* As per most tasks, this task is implemented in an infinite loop. */
@@ -184,25 +190,28 @@ volatile unsigned long ul;
 	int bufsz;
 	for( myiter = 0;;myiter++ )
 	{
-		/* Initiate the UART port to scan */
-		printfStart(mainPort, mainBaurade);
-
-
-		char str[30];
-		printfPrint( str, text1, myiter );
-		/* Scan */
-		bufsz = printfScanscanf(received, 2500000);
-		/* Show results */
-		printfPrint( str, text2, bufsz );
-		printfPrint( str, received);
-		printfPrint( str, text3);
-
-		/* Delay for a period. */
-		for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
+		if( done != 0 )
 		{
-			/* This loop is just a very crude delay implementation.  There is
-			nothing to do in here.  Later exercises will replace this crude
-			loop with a proper delay/sleep function. */
+			/* Initiate the UART port to scan */
+			Printf_start( mainPort, mainBaurade);
+
+			char str[30];
+			Printf_print( mainPort, str, text1, myiter );
+			/* Scan */
+			bufsz = Printf_scanf(mainPort, received, 4000);
+			received[bufsz] = '\n';  // End of line
+			received[bufsz + 1] = 0; // End of string
+			/* Show results */
+			Printf_print( mainPort, str, text2, bufsz );
+			Printf_print( mainPort, str, received);
+
+			/* Delay for a period. */
+			for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
+			{
+				/* This loop is just a very crude delay implementation.  There is
+				nothing to do in here.  Later exercises will replace this crude
+				loop with a proper delay/sleep function. */
+			}
 		}
 	}
 }
@@ -217,19 +226,22 @@ volatile unsigned long ul;
 	int myiter;
 	for( myiter = 0;;myiter++ )
 	{
-		/* Initiate the UART port to print */
-		logStart(mainPort, mainBaurade);
-
-		/* Print out the name of this test using LOG. */
-		char str[30];
-		logLog( str, pcTaskName, myiter );
-
-		/* Delay for a period. */
-		for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
+		if( done != 0 ) /* If Test 1 is done, then... */
 		{
-			/* This loop is just a very crude delay implementation.  There is
-			nothing to do in here.  Later exercises will replace this crude
-			loop with a proper delay/sleep function. */
+			/* Initiate the UART port to print */
+			Log_start(mainPort, mainBaurade);
+
+			/* Print out the name of this test using LOG. */
+			char str[30];
+			Log_log( str, pcTaskName, myiter );
+
+			/* Delay for a period. */
+			for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
+			{
+				/* This loop is just a very crude delay implementation.  There is
+				nothing to do in here.  Later exercises will replace this crude
+				loop with a proper delay/sleep function. */
+			}
 		}
 	}
 }

@@ -5,8 +5,8 @@
  * @Author: Carles Saura
  */
 
-#ifndef __PRINTF_H
-#define __PRINTF_H
+#ifndef __PRINTF_MY_H
+#define __PRINTF_MY_H
 
 #include <stdint.h>
 #include <stdarg.h>
@@ -19,7 +19,7 @@
  * @param port  		Port to initialize the connection
  * @param baudrate      The connection baudrate
  */
-void Printf_start( uint8_t  port, uint32_t baudrate);
+void Printf_start( uint8_t port, uint32_t baudrate);
 
 /*
  * Simple function to write to the UART.

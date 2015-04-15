@@ -43,7 +43,7 @@
 #include "log.h"
 
 /* Demo includes. */
-#include "basic_io.h"
+//#include "basic_io.h"
 
 /* Used as a loop counter to create a very crude delay. */
 #define mainDELAY_LOOP_COUNT		( 0xfffff )
@@ -69,7 +69,7 @@ int done = 0;
 int main( void )
 {
 	/* Init the semi-hosting. This is to debug only */
-	//printf( "\n" );
+	printf( "\n" );
 
 	/* Setting global poniters */
 	switch(mainPort){
@@ -149,7 +149,7 @@ volatile unsigned long ul;
 /*-----------------------------------------------------------*/
 void test2( void *pvParameters )
 {
-const char *pcTaskName = "Test 2 (printfPrint) is running the iteration number: %d\n\n";
+const char *pcTaskName = "Test 2 (Printf_vsprint) is running the iteration number: %d\n\n";
 volatile unsigned long ul;
 
 	/* As per most tasks, this task is implemented in an infinite loop. */
@@ -159,10 +159,10 @@ volatile unsigned long ul;
 		if( done != 0 ) /* If Test 1 is done, then... */
 		{
 			/* Initiate the UART port to print */
-			printfStart(mainPort, mainBaurade);
+			Printf_start(mainPort, mainBaurade);
 			/* Print out the name of this test using PRINTF. */
 			char str[30];
-			printfPrint( str, pcTaskName, myiter );
+			Printf_print( mainPort, str, pcTaskName, myiter );
 			/* Give the Semphr */
 			//xSemaphoreGive( xSemaphore2 );
 
@@ -193,17 +193,17 @@ volatile unsigned long ul;
 		if( done != 0 )
 		{
 			/* Initiate the UART port to scan */
-			printfStart(mainPort, mainBaurade);
+			Printf_start( mainPort, mainBaurade);
 
 			char str[30];
-			printfPrint( str, text1, myiter );
+			Printf_print( mainPort, str, text1, myiter );
 			/* Scan */
-			bufsz = printfScanscanf(received, 4000);
+			bufsz = Printf_scanf(mainPort, received, 4000);
 			received[bufsz] = '\n';  // End of line
 			received[bufsz + 1] = 0; // End of string
 			/* Show results */
-			printfPrint( str, text2, bufsz );
-			printfPrint( str, received);
+			Printf_print( mainPort, str, text2, bufsz );
+			Printf_print( mainPort, str, received);
 
 			/* Delay for a period. */
 			for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
@@ -229,11 +229,11 @@ volatile unsigned long ul;
 		if( done != 0 ) /* If Test 1 is done, then... */
 		{
 			/* Initiate the UART port to print */
-			logStart(mainPort, mainBaurade);
+			Log_start(mainPort, mainBaurade);
 
 			/* Print out the name of this test using LOG. */
 			char str[30];
-			logLog( str, pcTaskName, myiter );
+			Log_log( str, pcTaskName, myiter );
 
 			/* Delay for a period. */
 			for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )

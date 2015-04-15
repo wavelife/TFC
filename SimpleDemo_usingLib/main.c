@@ -96,13 +96,13 @@ int main( void )
 	xTaskCreate( test1, "Test 1", 240, NULL, 1, NULL );
 
 	/* Create the other task in exactly the same way as last. */
-	xTaskCreate( test2, "Test 2", 240, NULL, 1, NULL );
+	//xTaskCreate( test2, "Test 2", 240, NULL, 1, NULL );
 
 	/* Create the other task in exactly the same way as last. */
-	xTaskCreate( test3, "Test 3", 240, NULL, 1, NULL );
+	//xTaskCreate( test3, "Test 3", 240, NULL, 1, NULL );
 
 	/* Create the other task in exactly the same way as last. */
-	xTaskCreate( test4, "Test 4", 240, NULL, 1, NULL );
+	//xTaskCreate( test4, "Test 4", 240, NULL, 1, NULL );
 
 
 	/* Start the scheduler so our tasks start executing. */
@@ -125,7 +125,7 @@ volatile unsigned long ul;
 	int myiter;
 	for( myiter = 0;;myiter++ )
 	{
-		if( done == 0 ) /* this test is only executed one time */
+		//if( done == 0 ) /* this test is only executed one time */
 		{
 			/* Starting */
 			UARTInit(mainPort, mainBaurade);

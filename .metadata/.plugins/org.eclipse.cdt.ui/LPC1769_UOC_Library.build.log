@@ -1,6 +1,6 @@
-13:08:08 **** Incremental Build of configuration Debug for project LPC1769_UOC_Library ****
+21:23:30 **** Incremental Build of configuration Debug for project LPC1769_UOC_Library ****
 make -r all 
 make: Nothing to be done for `all'.
 
-13:08:08 Build Finished (took 70ms)
+21:23:30 Build Finished (took 47ms)
 
