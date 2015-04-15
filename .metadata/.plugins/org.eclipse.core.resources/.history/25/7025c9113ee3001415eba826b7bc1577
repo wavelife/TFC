@@ -1,0 +1,30 @@
+/*
+ * This is the file implementation for the log module using UART output
+ * @Author: Carles Saura
+ */
+#include "log.h"
+/* CLib includes */
+#include <stdint.h>
+#include <stdarg.h>
+/* to print using UART include */
+#include "printf.h"
+
+/*-----------------------------------------------------------*/
+
+void Log_start( uint8_t  port, uint32_t baudrate){
+	 printfStart( port, baudrate);
+}
+
+void Log_log(char* str, const char* format, ...){
+	const char *logHead = "\n***********************************\nText Log:\n\b";
+	const char *logEnd = "\n********************************end\n\n";
+	va_list listPointer;
+	/* This is used to transmit the variable parameters */
+	va_start( listPointer, format );
+
+	Printf_print(str,logHead, listPointer );
+	Printf_vsprint(str,format, listPointer );
+	Printf_print(str,logEnd, listPointer );
+}
+
+/*-----------------------------------------------------------*/

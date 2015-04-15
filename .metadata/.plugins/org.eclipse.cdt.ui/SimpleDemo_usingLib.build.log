@@ -1,6 +1,26 @@
-16:43:49 **** Incremental Build of configuration Debug for project SimpleDemo_usingLib ****
+09:07:51 **** Build of configuration Debug for project SimpleDemo_usingLib ****
 make -r all 
-make: Nothing to be done for `all'.
+Building file: ../cr_startup_lpc17.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv2p00_LPC17xx -D__CODE_RED -D__REDLIB__ -I"/Users/wavelife/Documents/UOC/TFC/pfc/LPC1769_UOC_Library" -I"/Users/wavelife/Documents/UOC/TFC/pfc/LPC1769_UOC_Library/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/LPC1769_UOC_Library/src" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/include" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/portable" -I"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/SimpleDemo" -O0 -g3 -fsigned-char -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"cr_startup_lpc17.d" -MT"cr_startup_lpc17.o" -MT"cr_startup_lpc17.d" -o "cr_startup_lpc17.o" "../cr_startup_lpc17.c"
+Finished building: ../cr_startup_lpc17.c
+ 
+Building file: ../main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv2p00_LPC17xx -D__CODE_RED -D__REDLIB__ -I"/Users/wavelife/Documents/UOC/TFC/pfc/LPC1769_UOC_Library" -I"/Users/wavelife/Documents/UOC/TFC/pfc/LPC1769_UOC_Library/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/LPC1769_UOC_Library/src" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/include" -I"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/portable" -I"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/inc" -I"/Users/wavelife/Documents/UOC/TFC/pfc/SimpleDemo" -O0 -g3 -fsigned-char -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"main.d" -MT"main.o" -MT"main.d" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: SimpleDemo_usingLib.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug" -L"/Users/wavelife/Documents/UOC/TFC/pfc/LPC1769_UOC_Library/Debug" -L"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug" -Xlinker --gc-sections -Xlinker -Map=SimpleDemo_usingLib.map -mcpu=cortex-m3 -mthumb -T "SimpleDemo_Debug.ld" -o "SimpleDemo_usingLib.axf"  ./cr_startup_lpc17.o ./main.o   -lLPC1769_UOC_Library -lCMSISv2p00_LPC17xx -lFreeRTOS_Library
+Finished building target: SimpleDemo_usingLib.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size SimpleDemo_usingLib.axf; # arm-none-eabi-objcopy -O ihex SimpleDemo_usingLib.axf SimpleDemo_usingLib.hex ;
+   text	   data	    bss	    dec	    hex	filename
+  20672	     32	  20548	  41252	   a124	SimpleDemo_usingLib.axf
+ 
 
-16:43:49 Build Finished (took 59ms)
+09:07:51 Build Finished (took 668ms)
 

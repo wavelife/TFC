@@ -1,25 +1,25 @@
 Archive member included because of file (symbol)
 
-/Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
                               ./cr_startup_lpc17.o (SystemInit)
-/Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
                               ./cr_startup_lpc17.o (vPortSVCHandler)
-/Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
                               ./printf.o (xQueueGenericCreate)
-/Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
                               ./main.o (xTaskGenericCreate)
-/Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
-                              /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o) (pvPortMalloc)
-/Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
-                              /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o) (vListInitialise)
+/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+                              /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o) (pvPortMalloc)
+/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+                              /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o) (vListInitialise)
 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_semihost.a(_cr__main.o)
                               ./cr_startup_lpc17.o (__main)
 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(memcpy.o)
-                              /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o) (memcpy)
+                              /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o) (memcpy)
 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(memset.o)
                               ./main.o (memset)
 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(fpprintf.o)
-                              /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o) (sprintf)
+                              /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o) (sprintf)
 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(initio.o)
                               /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_semihost.a(_cr__main.o) (_initio)
 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(printf.o)
@@ -29,7 +29,7 @@ Archive member included because of file (symbol)
 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(stdio.o)
                               /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(fpprintf.o) (__Ciob)
 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(strcat.o)
-                              /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o) (strcat)
+                              /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o) (strcat)
 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(strlen.o)
                               ./main.o (strlen)
 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(strncpy.o)
@@ -73,7 +73,7 @@ Archive member included because of file (symbol)
 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(_cr_check_heap.o)
                               /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(_cr_sbrk.o) (__check_heap_overflow)
 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libcr_eabihelpers.a(division_64.o)
-                              /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o) (__aeabi_uldivmod)
+                              /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o) (__aeabi_uldivmod)
 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libcr_eabihelpers.a(division_idiv0.o)
                               /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libcr_eabihelpers.a(division_64.o) (__aeabi_idiv0)
 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libcr_eabihelpers.a(double.o)
@@ -115,7 +115,7 @@ UART2Status         0x4               ./uart.o
 xSemUART            0x4               ./printf.o
 UART3Status         0x4               ./uart.o
 UART0Buffer         0x40              ./uart.o
-xQueueRegistry      0x50              /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+xQueueRegistry      0x50              /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
 main_lpc_uart_ier   0x4               ./main.o
 UART1Status         0x4               ./uart.o
 uart_buffer         0x4               ./printf.o
@@ -256,153 +256,153 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x7af ./uart.o
  .debug_macro   0x0000000000000000      0x2c7 ./uart.o
  .debug_macro   0x0000000000000000       0x70 ./uart.o
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .text          0x0000000000000000        0x0 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .data          0x0000000000000000        0x0 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .bss           0x0000000000000000        0x0 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .text          0x0000000000000000        0x0 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .data          0x0000000000000000        0x0 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .bss           0x0000000000000000        0x0 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
  .text.SystemCoreClockUpdate
-                0x0000000000000000       0xac /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .debug_macro   0x0000000000000000       0x10 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .debug_macro   0x0000000000000000      0x12d /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .debug_macro   0x0000000000000000      0x5b2 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .debug_macro   0x0000000000000000       0x22 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .debug_macro   0x0000000000000000       0x2e /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .debug_macro   0x0000000000000000       0x18 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .debug_macro   0x0000000000000000      0x7af /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .debug_macro   0x0000000000000000      0x2c7 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .bss           0x0000000000000000        0x0 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .rodata        0x0000000000000000        0x4 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .debug_macro   0x0000000000000000       0x10 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .debug_macro   0x0000000000000000      0x12d /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .debug_macro   0x0000000000000000       0x16 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .debug_macro   0x0000000000000000       0x46 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .debug_macro   0x0000000000000000      0x136 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .debug_macro   0x0000000000000000       0xa3 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .debug_macro   0x0000000000000000       0x12 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .debug_macro   0x0000000000000000       0x1e /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .debug_macro   0x0000000000000000      0x1b6 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .debug_macro   0x0000000000000000       0x48 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .debug_macro   0x0000000000000000       0x56 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .data          0x0000000000000000        0x0 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .bss           0x0000000000000000        0x0 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .debug_macro   0x0000000000000000      0x862 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .debug_macro   0x0000000000000000       0x10 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .debug_macro   0x0000000000000000      0x12d /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .debug_macro   0x0000000000000000       0x46 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .debug_macro   0x0000000000000000      0x136 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .debug_macro   0x0000000000000000       0xa3 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .debug_macro   0x0000000000000000       0x12 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .debug_macro   0x0000000000000000       0x1e /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .debug_macro   0x0000000000000000      0x1b6 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .debug_macro   0x0000000000000000       0x48 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .debug_macro   0x0000000000000000       0x56 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .debug_macro   0x0000000000000000      0x862 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .debug_macro   0x0000000000000000       0x10 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .debug_macro   0x0000000000000000      0x12d /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .debug_macro   0x0000000000000000       0xa0 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .debug_macro   0x0000000000000000       0x46 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .debug_macro   0x0000000000000000      0x136 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .debug_macro   0x0000000000000000       0xa3 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .debug_macro   0x0000000000000000       0x12 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .debug_macro   0x0000000000000000       0x1e /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .debug_macro   0x0000000000000000      0x1b6 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .debug_macro   0x0000000000000000       0x48 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .debug_macro   0x0000000000000000       0x56 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .debug_macro   0x0000000000000000      0x862 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .debug_macro   0x0000000000000000       0x10 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .debug_macro   0x0000000000000000      0x12d /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .debug_macro   0x0000000000000000       0x28 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .debug_macro   0x0000000000000000       0x46 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .debug_macro   0x0000000000000000      0x136 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .debug_macro   0x0000000000000000       0xa3 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .debug_macro   0x0000000000000000       0x12 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .debug_macro   0x0000000000000000       0x1e /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .debug_macro   0x0000000000000000      0x1b6 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .debug_macro   0x0000000000000000       0x48 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .debug_macro   0x0000000000000000       0x56 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .group         0x0000000000000000        0x8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .data          0x0000000000000000        0x0 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .bss           0x0000000000000000        0x0 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .debug_macro   0x0000000000000000      0x862 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .debug_macro   0x0000000000000000       0x10 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .debug_macro   0x0000000000000000      0x12d /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .debug_macro   0x0000000000000000       0x28 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .debug_macro   0x0000000000000000       0x46 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .debug_macro   0x0000000000000000      0x136 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .debug_macro   0x0000000000000000       0xa3 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .debug_macro   0x0000000000000000       0x12 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .debug_macro   0x0000000000000000       0x1e /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .debug_macro   0x0000000000000000      0x1b6 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
- .debug_macro   0x0000000000000000       0x48 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+                0x0000000000000000       0xac /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x0000000000000000       0x10 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x0000000000000000      0x12d /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x0000000000000000      0x5b2 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x0000000000000000       0x22 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x0000000000000000       0x2e /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x0000000000000000       0x18 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x0000000000000000      0x7af /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x0000000000000000      0x2c7 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .bss           0x0000000000000000        0x0 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .rodata        0x0000000000000000        0x4 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .debug_macro   0x0000000000000000       0x10 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .debug_macro   0x0000000000000000      0x12d /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .debug_macro   0x0000000000000000       0x16 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .debug_macro   0x0000000000000000       0x46 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .debug_macro   0x0000000000000000      0x136 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .debug_macro   0x0000000000000000       0xa3 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .debug_macro   0x0000000000000000       0x12 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .debug_macro   0x0000000000000000       0x1e /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .debug_macro   0x0000000000000000      0x1b6 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .debug_macro   0x0000000000000000       0x48 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .debug_macro   0x0000000000000000       0x56 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .data          0x0000000000000000        0x0 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .bss           0x0000000000000000        0x0 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .debug_macro   0x0000000000000000      0x862 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .debug_macro   0x0000000000000000       0x10 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .debug_macro   0x0000000000000000      0x12d /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .debug_macro   0x0000000000000000       0x46 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .debug_macro   0x0000000000000000      0x136 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .debug_macro   0x0000000000000000       0xa3 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .debug_macro   0x0000000000000000       0x12 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .debug_macro   0x0000000000000000       0x1e /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .debug_macro   0x0000000000000000      0x1b6 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .debug_macro   0x0000000000000000       0x48 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .debug_macro   0x0000000000000000       0x56 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_macro   0x0000000000000000      0x862 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_macro   0x0000000000000000       0x10 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_macro   0x0000000000000000      0x12d /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_macro   0x0000000000000000       0xa0 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_macro   0x0000000000000000       0x46 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_macro   0x0000000000000000      0x136 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_macro   0x0000000000000000       0xa3 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_macro   0x0000000000000000       0x12 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_macro   0x0000000000000000       0x1e /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_macro   0x0000000000000000      0x1b6 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_macro   0x0000000000000000       0x48 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_macro   0x0000000000000000       0x56 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .debug_macro   0x0000000000000000      0x862 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .debug_macro   0x0000000000000000       0x10 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .debug_macro   0x0000000000000000      0x12d /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .debug_macro   0x0000000000000000       0x28 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .debug_macro   0x0000000000000000       0x46 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .debug_macro   0x0000000000000000      0x136 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .debug_macro   0x0000000000000000       0xa3 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .debug_macro   0x0000000000000000       0x12 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .debug_macro   0x0000000000000000       0x1e /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .debug_macro   0x0000000000000000      0x1b6 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .debug_macro   0x0000000000000000       0x48 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .debug_macro   0x0000000000000000       0x56 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .group         0x0000000000000000        0x8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .data          0x0000000000000000        0x0 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .bss           0x0000000000000000        0x0 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .debug_macro   0x0000000000000000      0x862 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .debug_macro   0x0000000000000000       0x10 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .debug_macro   0x0000000000000000      0x12d /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .debug_macro   0x0000000000000000       0x28 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .debug_macro   0x0000000000000000       0x46 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .debug_macro   0x0000000000000000      0x136 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .debug_macro   0x0000000000000000       0xa3 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .debug_macro   0x0000000000000000       0x12 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .debug_macro   0x0000000000000000       0x1e /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .debug_macro   0x0000000000000000      0x1b6 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .debug_macro   0x0000000000000000       0x48 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
  .text          0x0000000000000000        0x0 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_semihost.a(_cr__main.o)
  .data          0x0000000000000000        0x0 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_semihost.a(_cr__main.o)
  .bss           0x0000000000000000        0x0 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_semihost.a(_cr__main.o)
@@ -664,8 +664,8 @@ LOAD ./log.o
 LOAD ./main.o
 LOAD ./printf.o
 LOAD ./uart.o
-LOAD /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a
-LOAD /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a
+LOAD /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a
+LOAD /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a
 START GROUP
 LOAD /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_semihost.a
 LOAD /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a
@@ -806,9 +806,9 @@ END GROUP
                 0x0000000000000c88       0x80 ./uart.o
                 0x0000000000000c88                UARTSend
  .text.SystemInit
-                0x0000000000000d08       0x9c /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+                0x0000000000000d08       0x9c /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
                 0x0000000000000d08                SystemInit
- .text          0x0000000000000da4      0x130 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .text          0x0000000000000da4      0x130 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
                 0x0000000000000da4                pxPortInitialiseStack
                 0x0000000000000dc0                vPortSVCHandler
                 0x0000000000000de0                vPortStartFirstTask
@@ -819,7 +819,7 @@ END GROUP
                 0x0000000000000e58                vPortExitCritical
                 0x0000000000000e70                xPortPendSVHandler
                 0x0000000000000eac                xPortSysTickHandler
- .text          0x0000000000000ed4      0x574 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .text          0x0000000000000ed4      0x574 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
                 0x0000000000000fd0                xQueueGenericCreate
                 0x0000000000001038                xQueueGenericSend
                 0x0000000000001114                xQueueCreateMutex
@@ -837,7 +837,7 @@ END GROUP
                 0x00000000000013f8                xQueueIsQueueEmptyFromISR
                 0x0000000000001404                xQueueIsQueueFullFromISR
                 0x0000000000001414                vQueueAddToRegistry
- .text          0x0000000000001448      0xc0c /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .text          0x0000000000001448      0xc0c /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
                 0x0000000000001518                xTaskGenericCreate
                 0x00000000000016b0                vTaskDelete
                 0x0000000000001718                uxTaskPriorityGet
@@ -869,12 +869,12 @@ END GROUP
                 0x0000000000001f8c                xTaskGetCurrentTaskHandle
                 0x0000000000001f98                vTaskPriorityInherit
                 0x0000000000002008                vTaskPriorityDisinherit
- .text          0x0000000000002054      0x11c /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .text          0x0000000000002054      0x11c /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
                 0x0000000000002054                pvPortMalloc
                 0x000000000000211c                vPortFree
                 0x0000000000002160                xPortGetFreeHeapSize
                 0x000000000000216c                vPortInitialiseBlocks
- .text          0x0000000000002170       0x9c /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .text          0x0000000000002170       0x9c /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
                 0x0000000000002170                vListInitialise
                 0x0000000000002188                vListInitialiseItem
                 0x0000000000002190                vListInsertEnd
@@ -1039,7 +1039,7 @@ END GROUP
                                         0x104 (size before relaxing)
  *fill*         0x0000000000004c4b        0x1 
  .rodata.str1.4
-                0x0000000000004c4c       0x20 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+                0x0000000000004c4c       0x20 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
  .rodata.str1.1
                 0x0000000000004c6c       0x34 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(fpprintf.o)
                                          0x35 (size before relaxing)
@@ -1114,11 +1114,11 @@ END GROUP
                 0x000000001000000a                UART2TxEmpty
                 0x000000001000000b                UART3TxEmpty
  .data.SystemCoreClock
-                0x000000001000000c        0x4 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+                0x000000001000000c        0x4 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
                 0x000000001000000c                SystemCoreClock
- .data          0x0000000010000010        0x4 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .data          0x0000000010000014        0x4 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .data          0x0000000010000018        0x4 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .data          0x0000000010000010        0x4 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .data          0x0000000010000014        0x4 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .data          0x0000000010000018        0x4 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
                 0x000000001000001c                . = ALIGN (0x4)
                 0x000000001000001c                _edata = .
 
@@ -1148,10 +1148,10 @@ END GROUP
                 0x000000001000003c                UART1Count
                 0x0000000010000040                UART2Count
                 0x0000000010000044                UART3Count
- .bss           0x0000000010000048      0x134 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .bss           0x0000000010000048      0x134 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
                 0x0000000010000048                pxCurrentTCB
  *fill*         0x000000001000017c        0x4 
- .bss           0x0000000010000180     0x4c18 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .bss           0x0000000010000180     0x4c18 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
  .bss.errno     0x0000000010004d98        0x4 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(errno.o)
                 0x0000000010004d98                errno
  *(COMMON)
@@ -1175,7 +1175,7 @@ END GROUP
                 0x0000000010004e48                UART3Buffer
                 0x0000000010004e88                UART2Buffer
                 0x0000000010004ec8                UART0Status
- COMMON         0x0000000010004ecc       0x50 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ COMMON         0x0000000010004ecc       0x50 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
                 0x0000000010004ecc                xQueueRegistry
  COMMON         0x0000000010004f1c        0x4 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(initio.o)
                 0x0000000010004f1c                _extra
@@ -1208,12 +1208,12 @@ OUTPUT(Example01.axf elf32-littlearm)
  .debug_info    0x00000000000003d2      0xd18 ./main.o
  .debug_info    0x00000000000010ea      0x8a7 ./printf.o
  .debug_info    0x0000000000001991      0xefb ./uart.o
- .debug_info    0x000000000000288c      0x318 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .debug_info    0x0000000000002ba4      0x1e8 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .debug_info    0x0000000000002d8c      0xf91 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .debug_info    0x0000000000003d1d     0x1932 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .debug_info    0x000000000000564f      0x2dd /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .debug_info    0x000000000000592c      0x25f /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .debug_info    0x000000000000288c      0x318 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .debug_info    0x0000000000002ba4      0x1e8 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .debug_info    0x0000000000002d8c      0xf91 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .debug_info    0x0000000000003d1d     0x1932 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_info    0x000000000000564f      0x2dd /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .debug_info    0x000000000000592c      0x25f /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
 
 .debug_abbrev   0x0000000000000000     0x130d
  .debug_abbrev  0x0000000000000000       0xe2 ./cr_startup_lpc17.o
@@ -1221,23 +1221,23 @@ OUTPUT(Example01.axf elf32-littlearm)
  .debug_abbrev  0x00000000000001f9      0x2b6 ./main.o
  .debug_abbrev  0x00000000000004af      0x1df ./printf.o
  .debug_abbrev  0x000000000000068e      0x244 ./uart.o
- .debug_abbrev  0x00000000000008d2       0xe6 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .debug_abbrev  0x00000000000009b8      0x136 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .debug_abbrev  0x0000000000000aee      0x287 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .debug_abbrev  0x0000000000000d75      0x31b /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .debug_abbrev  0x0000000000001090      0x1af /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .debug_abbrev  0x000000000000123f       0xce /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .debug_abbrev  0x00000000000008d2       0xe6 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .debug_abbrev  0x00000000000009b8      0x136 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .debug_abbrev  0x0000000000000aee      0x287 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .debug_abbrev  0x0000000000000d75      0x31b /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_abbrev  0x0000000000001090      0x1af /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .debug_abbrev  0x000000000000123f       0xce /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
 
 .debug_loc      0x0000000000000000     0x2193
  .debug_loc     0x0000000000000000       0x2b ./cr_startup_lpc17.o
  .debug_loc     0x000000000000002b       0x6e ./log.o
  .debug_loc     0x0000000000000099      0x113 ./main.o
  .debug_loc     0x00000000000001ac      0x5b3 ./uart.o
- .debug_loc     0x000000000000075f       0x5f /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .debug_loc     0x00000000000007be      0x90d /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .debug_loc     0x00000000000010cb      0xe57 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .debug_loc     0x0000000000001f22      0x22d /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .debug_loc     0x000000000000214f       0x44 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .debug_loc     0x000000000000075f       0x5f /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .debug_loc     0x00000000000007be      0x90d /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .debug_loc     0x00000000000010cb      0xe57 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_loc     0x0000000000001f22      0x22d /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .debug_loc     0x000000000000214f       0x44 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
 
 .debug_aranges  0x0000000000000000      0x250
  .debug_aranges
@@ -1251,17 +1251,17 @@ OUTPUT(Example01.axf elf32-littlearm)
  .debug_aranges
                 0x0000000000000140       0x48 ./uart.o
  .debug_aranges
-                0x0000000000000188       0x28 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+                0x0000000000000188       0x28 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
  .debug_aranges
-                0x00000000000001b0       0x20 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+                0x00000000000001b0       0x20 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
  .debug_aranges
-                0x00000000000001d0       0x20 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+                0x00000000000001d0       0x20 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
  .debug_aranges
-                0x00000000000001f0       0x20 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+                0x00000000000001f0       0x20 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
  .debug_aranges
-                0x0000000000000210       0x20 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+                0x0000000000000210       0x20 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
  .debug_aranges
-                0x0000000000000230       0x20 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+                0x0000000000000230       0x20 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
 
 .debug_ranges   0x0000000000000000      0x1f0
  .debug_ranges  0x0000000000000000       0x60 ./cr_startup_lpc17.o
@@ -1269,9 +1269,9 @@ OUTPUT(Example01.axf elf32-littlearm)
  .debug_ranges  0x0000000000000078       0x98 ./main.o
  .debug_ranges  0x0000000000000110       0x38 ./printf.o
  .debug_ranges  0x0000000000000148       0x38 ./uart.o
- .debug_ranges  0x0000000000000180       0x18 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .debug_ranges  0x0000000000000198       0x10 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .debug_ranges  0x00000000000001a8       0x48 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_ranges  0x0000000000000180       0x18 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .debug_ranges  0x0000000000000198       0x10 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .debug_ranges  0x00000000000001a8       0x48 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
 
 .debug_macro    0x0000000000000000     0x45db
  .debug_macro   0x0000000000000000       0x52 ./cr_startup_lpc17.o
@@ -1307,55 +1307,55 @@ OUTPUT(Example01.axf elf32-littlearm)
  .debug_macro   0x0000000000002d6b       0x69 ./printf.o
  .debug_macro   0x0000000000002dd4       0x87 ./uart.o
  .debug_macro   0x0000000000002e5b       0x1c ./uart.o
- .debug_macro   0x0000000000002e77      0x12b /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .debug_macro   0x0000000000002fa2      0x874 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .debug_macro   0x0000000000003816       0xda /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .debug_macro   0x00000000000038f0      0x862 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .debug_macro   0x0000000000004152      0x133 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .debug_macro   0x0000000000004285       0x28 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .debug_macro   0x00000000000042ad      0x133 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .debug_macro   0x00000000000043e0       0x22 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .debug_macro   0x0000000000004402       0x5b /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .debug_macro   0x000000000000445d       0x16 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .debug_macro   0x0000000000004473       0xcb /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .debug_macro   0x000000000000453e       0x9d /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .debug_macro   0x0000000000002e77      0x12b /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x0000000000002fa2      0x874 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .debug_macro   0x0000000000003816       0xda /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .debug_macro   0x00000000000038f0      0x862 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .debug_macro   0x0000000000004152      0x133 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .debug_macro   0x0000000000004285       0x28 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .debug_macro   0x00000000000042ad      0x133 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_macro   0x00000000000043e0       0x22 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_macro   0x0000000000004402       0x5b /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_macro   0x000000000000445d       0x16 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_macro   0x0000000000004473       0xcb /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .debug_macro   0x000000000000453e       0x9d /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
 
-.debug_line     0x0000000000000000     0x208a
- .debug_line    0x0000000000000000      0x23e ./cr_startup_lpc17.o
- .debug_line    0x000000000000023e      0x172 ./log.o
- .debug_line    0x00000000000003b0      0x422 ./main.o
- .debug_line    0x00000000000007d2      0x4cd ./printf.o
- .debug_line    0x0000000000000c9f      0x321 ./uart.o
- .debug_line    0x0000000000000fc0      0x1d3 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .debug_line    0x0000000000001193      0x21f /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .debug_line    0x00000000000013b2      0x358 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .debug_line    0x000000000000170a      0x51d /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .debug_line    0x0000000000001c27      0x24f /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .debug_line    0x0000000000001e76      0x214 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+.debug_line     0x0000000000000000     0x2148
+ .debug_line    0x0000000000000000      0x248 ./cr_startup_lpc17.o
+ .debug_line    0x0000000000000248      0x17c ./log.o
+ .debug_line    0x00000000000003c4      0x454 ./main.o
+ .debug_line    0x0000000000000818      0x4cd ./printf.o
+ .debug_line    0x0000000000000ce5      0x335 ./uart.o
+ .debug_line    0x000000000000101a      0x1d3 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .debug_line    0x00000000000011ed      0x233 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .debug_line    0x0000000000001420      0x36c /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .debug_line    0x000000000000178c      0x531 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_line    0x0000000000001cbd      0x263 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .debug_line    0x0000000000001f20      0x228 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
 
-.debug_str      0x0000000000000000     0xdd14
- .debug_str     0x0000000000000000     0x3c94 ./cr_startup_lpc17.o
-                                       0x3d1f (size before relaxing)
- .debug_str     0x0000000000003c94       0xff ./log.o
-                                       0x3cab (size before relaxing)
- .debug_str     0x0000000000003d93     0x6181 ./main.o
-                                       0x9e25 (size before relaxing)
- .debug_str     0x0000000000009f14     0x129a ./printf.o
+.debug_str      0x0000000000000000     0xdd32
+ .debug_str     0x0000000000000000     0x3c9e ./cr_startup_lpc17.o
+                                       0x3d29 (size before relaxing)
+ .debug_str     0x0000000000003c9e       0xff ./log.o
+                                       0x3cb5 (size before relaxing)
+ .debug_str     0x0000000000003d9d     0x6181 ./main.o
+                                       0x9e2f (size before relaxing)
+ .debug_str     0x0000000000009f1e     0x129a ./printf.o
                                        0xae09 (size before relaxing)
- .debug_str     0x000000000000b1ae      0x556 ./uart.o
-                                       0x845f (size before relaxing)
- .debug_str     0x000000000000b704      0x3e3 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
-                                       0x80fd (size before relaxing)
- .debug_str     0x000000000000bae7      0x42e /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
-                                       0x49d0 (size before relaxing)
- .debug_str     0x000000000000bf15      0x8af /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
-                                       0x5090 (size before relaxing)
- .debug_str     0x000000000000c7c4     0x10ce /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
-                                       0x5d60 (size before relaxing)
- .debug_str     0x000000000000d892      0x442 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
-                                       0x4b6f (size before relaxing)
- .debug_str     0x000000000000dcd4       0x40 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
-                                       0x4491 (size before relaxing)
+ .debug_str     0x000000000000b1b8      0x556 ./uart.o
+                                       0x8469 (size before relaxing)
+ .debug_str     0x000000000000b70e      0x3ed /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+                                       0x8107 (size before relaxing)
+ .debug_str     0x000000000000bafb      0x438 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+                                       0x49da (size before relaxing)
+ .debug_str     0x000000000000bf33      0x8af /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+                                       0x509a (size before relaxing)
+ .debug_str     0x000000000000c7e2     0x10ce /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+                                       0x5d6a (size before relaxing)
+ .debug_str     0x000000000000d8b0      0x442 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+                                       0x4b79 (size before relaxing)
+ .debug_str     0x000000000000dcf2       0x40 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+                                       0x449b (size before relaxing)
 
 .comment        0x0000000000000000       0x70
  .comment       0x0000000000000000       0x70 ./cr_startup_lpc17.o
@@ -1364,12 +1364,12 @@ OUTPUT(Example01.axf elf32-littlearm)
  .comment       0x0000000000000000       0x71 ./main.o
  .comment       0x0000000000000000       0x71 ./printf.o
  .comment       0x0000000000000000       0x71 ./uart.o
- .comment       0x0000000000000000       0x71 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .comment       0x0000000000000000       0x71 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .comment       0x0000000000000000       0x71 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .comment       0x0000000000000000       0x71 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .comment       0x0000000000000000       0x71 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .comment       0x0000000000000000       0x71 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .comment       0x0000000000000000       0x71 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .comment       0x0000000000000000       0x71 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .comment       0x0000000000000000       0x71 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .comment       0x0000000000000000       0x71 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .comment       0x0000000000000000       0x71 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .comment       0x0000000000000000       0x71 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
  .comment       0x0000000000000000       0x71 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_semihost.a(_cr__main.o)
  .comment       0x0000000000000000       0x71 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(memcpy.o)
  .comment       0x0000000000000000       0x71 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_c.a(memset.o)
@@ -1414,17 +1414,17 @@ OUTPUT(Example01.axf elf32-littlearm)
  .ARM.attributes
                 0x00000000000000cc       0x33 ./uart.o
  .ARM.attributes
-                0x00000000000000ff       0x33 /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+                0x00000000000000ff       0x33 /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
  .ARM.attributes
-                0x0000000000000132       0x33 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+                0x0000000000000132       0x33 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
  .ARM.attributes
-                0x0000000000000165       0x33 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+                0x0000000000000165       0x33 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
  .ARM.attributes
-                0x0000000000000198       0x33 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+                0x0000000000000198       0x33 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
  .ARM.attributes
-                0x00000000000001cb       0x33 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+                0x00000000000001cb       0x33 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
  .ARM.attributes
-                0x00000000000001fe       0x33 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+                0x00000000000001fe       0x33 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
  .ARM.attributes
                 0x0000000000000231       0x33 /Applications/lpcxpresso_7.6.2_326/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libcr_semihost.a(_cr__main.o)
  .ARM.attributes
@@ -1510,9 +1510,9 @@ OUTPUT(Example01.axf elf32-littlearm)
  .debug_frame   0x0000000000000124       0xf0 ./main.o
  .debug_frame   0x0000000000000214      0x104 ./printf.o
  .debug_frame   0x0000000000000318       0x7c ./uart.o
- .debug_frame   0x0000000000000394       0x3c /Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
- .debug_frame   0x00000000000003d0       0xc0 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
- .debug_frame   0x0000000000000490      0x210 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
- .debug_frame   0x00000000000006a0      0x374 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
- .debug_frame   0x0000000000000a14       0x70 /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
- .debug_frame   0x0000000000000a84       0x6c /Users/Carles/Documents/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
+ .debug_frame   0x0000000000000394       0x3c /Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug/libCMSISv2p00_LPC17xx.a(system_LPC17xx.o)
+ .debug_frame   0x00000000000003d0       0xc0 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(port.o)
+ .debug_frame   0x0000000000000490      0x210 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(queue.o)
+ .debug_frame   0x00000000000006a0      0x374 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(tasks.o)
+ .debug_frame   0x0000000000000a14       0x70 /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(heap_2.o)
+ .debug_frame   0x0000000000000a84       0x6c /Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug/libFreeRTOS_Library.a(list.o)
