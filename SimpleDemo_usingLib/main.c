@@ -69,7 +69,7 @@ int done = 0;
 int main( void )
 {
 	/* Init the semi-hosting. This is to debug only */
-	printf( "\n" );
+	//printf( "\n" );
 
 	/* Setting global poniters */
 	switch(mainPort){

@@ -1,6 +1,6 @@
-21:23:31 **** Incremental Build of configuration Debug for project SimpleDemo_usingLib ****
+10:11:12 **** Incremental Build of configuration Debug for project SimpleDemo_usingLib ****
 make -r all 
 make: Nothing to be done for `all'.
 
-21:23:32 Build Finished (took 59ms)
+10:11:12 Build Finished (took 60ms)
 
