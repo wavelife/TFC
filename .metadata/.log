@@ -6295,3 +6295,13 @@ Binding(ALT+CTRL+H,
 
 !ENTRY org.eclipse.ui 4 4 2015-04-15 21:30:38.581
 !MESSAGE Conflicting handlers for com.crt.dsfswv.TraceViews: {com.crt.dsfswv.views.TraceViewsHandler} vs {com.crt.dsfswv.views.TraceViewsHandler}
+
+!ENTRY org.eclipse.ui 4 4 2015-04-15 21:35:54.144
+!MESSAGE Conflicting handlers for com.crt.dsfswv.TraceViews: {com.crt.dsfswv.views.TraceViewsHandler} vs {com.crt.dsfswv.views.TraceViewsHandler}
+
+!ENTRY com.crt.dsfdebug 4 0 2015-04-16 08:27:56.098
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-04-16 08:27:56.098
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2015-04-16 08:27:56.098
+!MESSAGE Not connected to emulator.
