@@ -1,5 +1,5 @@
 /*
-    FreeRTOS V6.1.1 - Copyright (C) 2011 Real Time Engineers Ltd.
+    FreeRTOS V8.0.1 - Copyright (C) 2014 Real Time Engineers Ltd.
 
     This file is part of the FreeRTOS distribution.
 
@@ -30,239 +30,187 @@
     licensing and training services.
 */
 
+/* Library includes. */
+#include <stdio.h>
+#include <stdlib.h>
+
 /* FreeRTOS.org includes. */
-#ifndef INC_FREERTOS_H
-	#include "FreeRTOS.h"
-#endif
-#ifndef TASK_H
-	#include "task.h"
-#endif
-#ifndef SEMAPHORE_H
-	#include "semphr.h"
-#endif
-/* Includes for testing */
-#ifndef __STRING_H_INCLUDED
-	#include <string.h>
-#endif
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
 #ifndef LPCXPRESSO1769
 	#include "LPC17xx.h"
 #endif
-#ifndef __UART_H
-	#include "uart.h"
-#endif
+
+/* Demo includes. */
+//#include "basic_io.h"
 
 
-/* Used as a loop counter to create a very crude delay. */
-#define mainDELAY_LOOP_COUNT		( 0xfffff )
+/* The tasks to be created.  Two instances are created of the sender task while
+only a single instance is created of the receiver task. */
+static void vSenderTask( void *pvParameters );
+static void vReceiverTask( void *pvParameters );
 
-/* The task functions. */
-void test1( void *pvParameters );
-void test2( void *pvParameters );
-void test3( void *pvParameters );
-void test4( void *pvParameters );
+#define _MAX_NUMBER_STACKS_IN_QUEUE 25
 
-/* Variables used to test */
-extern volatile uint32_t UART0Count, UART1Count, UART2Count, UART3Count;
-extern volatile uint8_t UART0Buffer, UART1Buffer, UART2Buffer, UART3Buffer;
-volatile uint32_t *main_lpc_uart_ier;
-volatile uint32_t *main_uart_count;
-volatile uint8_t *main_uart_buffer;
-uint8_t mainPort = 3;
-int mainBaurade = 115200;
-int done = 0;
-xSemaphoreHandle sem_test1 = NULL;
 /*-----------------------------------------------------------*/
+
+/* Declare a variable of type xQueueHandle.  This is used to store the queue
+that is accessed by all three tasks. */
+xQueueHandle xQueue;
+/* Declare a variable of type xSemaphoreHandle.  This is used to reference the
+mutex type semaphore that is used to ensure mutual exclusive access to stdout. */
+xSemaphoreHandle xMutex;
+uint8_t mainPort = 3;
+const uint8_t maxStack = 5;
+int mainBaurade = 115200;
+char str[40];
 
 int main( void )
 {
 	/* Init the semi-hosting. This is to debug only */
 	printf( "\n" );
+	/* Initiate the UART port to print */
+	Log_start(mainPort, mainBaurade);
+    /* The queue is created to hold a maximum of 5 long values. */
+    xQueue = xQueueCreate( _MAX_NUMBER_STACKS_IN_QUEUE, sizeof( int ) );
+    /* Before a semaphore is used it must be explicitly created. */
+	xMutex = xSemaphoreCreateMutex();
+	/* Take the semaphore to prevent acces to the Queue when is full */
+	xSemaphoreTake( xMutex, portMAX_DELAY );
+	/* The tasks are going to use a pseudo random delay, seed the random number
+	generator. */
+	srand( 435 );
 
-	/* Setting global poniters */
-	switch(mainPort){
-	case 0: main_lpc_uart_ier = &LPC_UART0->IER;
-		main_uart_count = &UART0Count;
-		main_uart_buffer = &UART0Buffer;
-		break;
-	case 1: main_lpc_uart_ier = &LPC_UART1->IER;
-		main_uart_count = &UART1Count;
-		main_uart_buffer = &UART1Buffer;
-		break;
-	case 2: main_lpc_uart_ier = &LPC_UART2->IER;
-		main_uart_count = &UART2Count;
-		main_uart_buffer = &UART2Buffer;
-		break;
-	default:
-	case 3: main_lpc_uart_ier = &LPC_UART3->IER;
-		main_uart_count = &UART3Count;
-		main_uart_buffer = &UART3Buffer;
-		break;
+	if( xQueue != NULL && xMutex != NULL)
+	{
+		Log_log( str, "BEGIN TEST\n" );
+		/* Create two instances of the task that will write to the queue.  The
+		parameter is used to pass the value that the task should write to the queue,
+		so one task will continuously write 100 to the queue while the other task
+		will continuously write 200 to the queue.  Both tasks are created at
+		priority 1. */
+		xTaskCreate( vSenderTask, "Sender1", 240, ( void * ) 1, 1, NULL );
+		xTaskCreate( vSenderTask, "Sender2", 240, ( void * ) 2, 1, NULL );
+
+		/* Create the task that will read from the queue.  The task is created with
+		priority 2, so above the priority of the sender tasks. */
+		xTaskCreate( vReceiverTask, "Receiver", 240, NULL, 2, NULL );
+
+		/* Start the scheduler so the created tasks start executing. */
+		vTaskStartScheduler();
 	}
-	/* Initiate the test 1 semaphore */
-	if ( sem_test1 == NULL ){
-		vSemaphoreCreateBinary( sem_test1 );
-		xSemaphoreTake( sem_test1, ( portTickType ) 10 );
+	else
+	{
+		/* The queue could not be created. */
 	}
 
-
-	/* Create the other task in exactly the same way as last. */
-	xTaskCreate( test1, "Test 1", 240, NULL, 1, NULL );
-
-	/* Create the other task in exactly the same way as last. */
-	xTaskCreate( test2, "Test 2", 240, NULL, 1, NULL );
-
-	/* Create the other task in exactly the same way as last. */
-	xTaskCreate( test3, "Test 3", 240, NULL, 1, NULL );
-
-	/* Create the other task in exactly the same way as last. */
-	xTaskCreate( test4, "Test 4", 240, NULL, 1, NULL );
-
-
-	/* Start the scheduler so our tasks start executing. */
-	vTaskStartScheduler();
-
-	/* If all is well we will never reach here as the scheduler will now be
-	running.  If we do reach here then it is likely that there was insufficient
-	heap available for the idle task to be created. */
+    /* If all is well we will never reach here as the scheduler will now be
+    running the tasks.  If we do reach here then it is likely that there was
+    insufficient heap memory available for a resource to be created. */
 	for( ;; );
 	return 0;
 }
 /*-----------------------------------------------------------*/
 
-void test1( void *pvParameters )
+static void vSenderTask( void *pvParameters )
 {
-const char *text = "Test 1 (UART)\n\n";
-volatile unsigned long ul;
+long lValueToSend;
+portBASE_TYPE xStatus;
+const int toSend = rand();
 
-	/* As per most tasks, this task is implemented in an infinite loop. */
-	int myiter;
+	/* Two instances are created of this task so the value that is sent to the
+	queue is passed in via the task parameter rather than be hard coded.  This way
+	each instance can use a different value.  Cast the parameter to the required
+	type. */
+	lValueToSend = ( long ) pvParameters;
 
-	for( myiter = 0;;myiter++ )
+	/* As per most tasks, this task is implemented within an infinite loop. */
+	for( ;; )
 	{
-		if( done == 0 ) /* this test is only executed one time */
+		/* The first parameter is the queue to which data is being sent.  The
+		queue was created before the scheduler was started, so before this task
+		started to execute.
+
+		The second parameter is the address of the data to be sent.
+
+		The third parameter is the Block time � the time the task should be kept
+		in the Blocked state to wait for space to become available on the queue
+		should the queue already be full.  In this case we don�t specify a block
+		time because there should always be space in the queue. */
+		xStatus = xQueueSendToBack( xQueue, &toSend, portMAX_DELAY );
+
+		if( xStatus != pdPASS )
 		{
-			/* Starting */
-			UARTInit(mainPort, mainBaurade);
-			/* Print out the name of this test using UART. */
-			*main_lpc_uart_ier = IER_THRE | IER_RLS;				/* Disable RBR */
-			UARTSend(mainPort, (uint8_t *)text , strlen(text) );
-			*main_uart_count = 0;
-			*main_lpc_uart_ier = IER_THRE | IER_RLS | IER_RBR;		/* Re-enable RBR */
-			xSemaphoreGive( sem_test1 );
-			done = 1; /* Prevent to execute again */
-			/* Delay for a period. */
-			for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
-			{
-				/* This loop is just a very crude delay implementation.  There is
-				nothing to do in here.  Later exercises will replace this crude
-				loop with a proper delay/sleep function. */
+			/* We could not write to the queue because it was full. Send a message to inform about it */
+			Log_log( str, "Could not send to the queue. Sender %d\n. Value: %d\n", lValueToSend, toSend );
+			/* Wait until Queue will be empty */
+			while ( xSemaphoreTake( xMutex, portMAX_DELAY ) != pdTRUE){}
+			xStatus = xQueueSendToBack( xQueue, &toSend, portMAX_DELAY );
+			xSemaphoreGive( xMutex );
+		}
+
+		/* Allow the other sender task to execute. */
+		taskYIELD();
+	}
+}
+/*-----------------------------------------------------------*/
+
+static void vReceiverTask( void *pvParameters )
+{
+/* Declare the variable that will hold the values received from the queue. */
+int lReceivedValue;
+portBASE_TYPE xStatus;
+const portTickType xTicksToWait = 100 / portTICK_RATE_MS;
+
+	/* This task is also defined within an infinite loop. */
+	for( ;; )
+	{
+		/* As this task unblocks immediately that data is written to the queue this
+		call should always find the queue empty. */
+		switch ( uxQueueMessagesWaiting( xQueue ) )
+		{
+		case 0:
+			vPrintString( "Queue should have been empty!\r\n" );
+			break;
+		case _MAX_NUMBER_STACKS_IN_QUEUE:
+			while ( uxQueueMessagesWaiting( xQueue ) != 0 ){
+				xStatus = xQueueReceive( xQueue, &lReceivedValue, xTicksToWait );
+				if( xStatus == pdPASS )
+					Log_log( str, "The Queue was full. Value = %d\n", lReceivedValue );
 			}
+			xSemaphoreGive( xMutex );
+			/* Allow the other sender task to execute. */
+			taskYIELD();
+			xSemaphoreTake( xMutex, portMAX_DELAY );
+			break;
+		default: break;
 		}
-	}
-}
-/*-----------------------------------------------------------*/
-void test2( void *pvParameters )
-{
-const char *pcTaskName = "Test 2 (Printf_vsprint) is running the iteration number: %d\n\n";
-volatile unsigned long ul;
 
-	/* As per most tasks, this task is implemented in an infinite loop. */
-	int myiter;
-	for( myiter = 0;;myiter++ )
-	{
-		if( done == 0 ){ /* If Test 1 is done, then... */
-			while( xSemaphoreTake( sem_test1, ( portTickType ) 100 ) != pdTRUE ){}
-			xSemaphoreGive( sem_test1 );
-		}
-		/* Initiate the UART port to print */
-		Printf_start(mainPort, mainBaurade);
-		/* Print out the name of this test using PRINTF. */
-		char str[30];
-		Printf_print( mainPort, 0, str, pcTaskName, myiter );
+		/* The first parameter is the queue from which data is to be received.  The
+		queue is created before the scheduler is started, and therefore before this
+		task runs for the first time.
 
-		/* Delay for a period. */
-		for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
+		The second parameter is the buffer into which the received data will be
+		placed.  In this case the buffer is simply the address of a variable that
+		has the required size to hold the received data.
+
+		the last parameter is the block time � the maximum amount of time that the
+		task should remain in the Blocked state to wait for data to be available should
+		the queue already be empty. */
+		xStatus = xQueueReceive( xQueue, &lReceivedValue, xTicksToWait );
+
+		if( xStatus == pdPASS )
 		{
-			/* This loop is just a very crude delay implementation.  There is
-			nothing to do in here.  Later exercises will replace this crude
-			loop with a proper delay/sleep function. */
+			/* Data was successfully received from the queue, print out the received
+			value. */
+			Log_log( str, "Received = %d\n", lReceivedValue );
 		}
-	}
-}
-/*-----------------------------------------------------------*/
-
-void test3( void *pvParameters )
-{
-const char *text1 = "\nTest 3 (printfScan) iteration: %d - Introduce some char...\n";
-const char *text2 = " returned count: %d text is:\n";
-char received[80] = "\0";
-volatile unsigned long ul;
-uint8_t trans_id;
-
-	/* As per most tasks, this task is implemented in an infinite loop. */
-	int myiter;
-	int bufsz;
-	for( myiter = 0;;myiter++ )
-	{
-		if( done == 0 ){ /* If Test 1 is not done, then wait */
-			while( xSemaphoreTake( sem_test1, ( portTickType ) 100 ) != pdTRUE ){}
-			xSemaphoreGive( sem_test1 );
-		}
-		/* Initiate the UART port to scan */
-		Printf_start( mainPort, mainBaurade);
-		/* Enable transaction mode */
-		trans_id = Printf_transactionOn();
-
-		char str[30];
-		Printf_print( mainPort, trans_id, str, text1, myiter );
-		/* Scan */
-		bufsz = Printf_scanf(mainPort, received, 4000);
-		received[bufsz] = '\n';  // End of line
-		received[bufsz + 1] = '\n';
-		received[bufsz + 2] = 0; // End of string
-		/* Show results */
-		Printf_print( mainPort, trans_id, str, text2, bufsz );
-		Printf_print( mainPort, trans_id, str, received);
-		/* Disable transaction mode */
-		Printf_transactionOff();
-
-		/* Delay for a period. */
-		for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
+		else
 		{
-			/* This loop is just a very crude delay implementation.  There is
-			nothing to do in here.  Later exercises will replace this crude
-			loop with a proper delay/sleep function. */
-		}
-	}
-}
-/*-----------------------------------------------------------*/
-
-void test4( void *pvParameters )
-{
-const char *pcTaskName = "Test 4 (Log) is running the iteration number: %d\n";
-volatile unsigned long ul;
-
-	/* As per most tasks, this task is implemented in an infinite loop. */
-	int myiter;
-	for( myiter = 0;;myiter++ )
-	{
-		if( done == 0 ){ /* If Test 1 is not done, then wait */
-			while( xSemaphoreTake( sem_test1, ( portTickType ) 100 ) != pdTRUE ){}
-			xSemaphoreGive( sem_test1 );
-		}
-		/* Initiate the UART port to print */
-		Log_start(mainPort, mainBaurade);
-
-		/* Print out the name of this test using LOG. */
-		char str[30];
-		Log_log( str, pcTaskName, myiter );
-
-		/* Delay for a period. */
-		for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
-		{
-			/* This loop is just a very crude delay implementation.  There is
-			nothing to do in here.  Later exercises will replace this crude
-			loop with a proper delay/sleep function. */
+			/* We did not receive anything from the queue even after waiting for 100ms. */
+			Log_log( str, "Could not receive from the queue.\n" );
 		}
 	}
 }
