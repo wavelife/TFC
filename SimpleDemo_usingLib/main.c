@@ -34,16 +34,23 @@
 #ifndef INC_FREERTOS_H
 	#include "FreeRTOS.h"
 #endif
-#include "task.h"
+#ifndef TASK_H
+	#include "task.h"
+#endif
+#ifndef SEMAPHORE_H
+	#include "semphr.h"
+#endif
 /* Includes for testing */
-#include <string.h>
-#include "LPC17xx.h"
-#include "uart.h"
-#include "printf.h"
-#include "log.h"
+#ifndef __STRING_H_INCLUDED
+	#include <string.h>
+#endif
+#ifndef LPCXPRESSO1769
+	#include "LPC17xx.h"
+#endif
+#ifndef __UART_H
+	#include "uart.h"
+#endif
 
-/* Demo includes. */
-//#include "basic_io.h"
 
 /* Used as a loop counter to create a very crude delay. */
 #define mainDELAY_LOOP_COUNT		( 0xfffff )
@@ -60,10 +67,10 @@ extern volatile uint8_t UART0Buffer, UART1Buffer, UART2Buffer, UART3Buffer;
 volatile uint32_t *main_lpc_uart_ier;
 volatile uint32_t *main_uart_count;
 volatile uint8_t *main_uart_buffer;
-uint8_t mainPort = 0;
+uint8_t mainPort = 3;
 int mainBaurade = 115200;
 int done = 0;
-
+xSemaphoreHandle sem_test1 = NULL;
 /*-----------------------------------------------------------*/
 
 int main( void )
@@ -91,6 +98,12 @@ int main( void )
 		main_uart_buffer = &UART3Buffer;
 		break;
 	}
+	/* Initiate the test 1 semaphore */
+	if ( sem_test1 == NULL ){
+		vSemaphoreCreateBinary( sem_test1 );
+		xSemaphoreTake( sem_test1, ( portTickType ) 10 );
+	}
+
 
 	/* Create the other task in exactly the same way as last. */
 	xTaskCreate( test1, "Test 1", 240, NULL, 1, NULL );
@@ -123,6 +136,7 @@ volatile unsigned long ul;
 
 	/* As per most tasks, this task is implemented in an infinite loop. */
 	int myiter;
+
 	for( myiter = 0;;myiter++ )
 	{
 		if( done == 0 ) /* this test is only executed one time */
@@ -134,7 +148,7 @@ volatile unsigned long ul;
 			UARTSend(mainPort, (uint8_t *)text , strlen(text) );
 			*main_uart_count = 0;
 			*main_lpc_uart_ier = IER_THRE | IER_RLS | IER_RBR;		/* Re-enable RBR */
-
+			xSemaphoreGive( sem_test1 );
 			done = 1; /* Prevent to execute again */
 			/* Delay for a period. */
 			for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
@@ -149,30 +163,29 @@ volatile unsigned long ul;
 /*-----------------------------------------------------------*/
 void test2( void *pvParameters )
 {
-const char *pcTaskName = "Test 2 (printfPrint) is running the iteration number: %d\n\n";
+const char *pcTaskName = "Test 2 (Printf_vsprint) is running the iteration number: %d\n\n";
 volatile unsigned long ul;
 
 	/* As per most tasks, this task is implemented in an infinite loop. */
 	int myiter;
 	for( myiter = 0;;myiter++ )
 	{
-		if( done != 0 ) /* If Test 1 is done, then... */
-		{
-			/* Initiate the UART port to print */
-			printfStart(mainPort, mainBaurade);
-			/* Print out the name of this test using PRINTF. */
-			char str[30];
-			printfPrint( str, pcTaskName, myiter );
-			/* Give the Semphr */
-			//xSemaphoreGive( xSemaphore2 );
+		if( done == 0 ){ /* If Test 1 is done, then... */
+			while( xSemaphoreTake( sem_test1, ( portTickType ) 100 ) != pdTRUE ){}
+			xSemaphoreGive( sem_test1 );
+		}
+		/* Initiate the UART port to print */
+		Printf_start(mainPort, mainBaurade);
+		/* Print out the name of this test using PRINTF. */
+		char str[30];
+		Printf_print( mainPort, 0, str, pcTaskName, myiter );
 
-			/* Delay for a period. */
-			for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
-			{
-				/* This loop is just a very crude delay implementation.  There is
-				nothing to do in here.  Later exercises will replace this crude
-				loop with a proper delay/sleep function. */
-			}
+		/* Delay for a period. */
+		for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
+		{
+			/* This loop is just a very crude delay implementation.  There is
+			nothing to do in here.  Later exercises will replace this crude
+			loop with a proper delay/sleep function. */
 		}
 	}
 }
@@ -184,34 +197,41 @@ const char *text1 = "\nTest 3 (printfScan) iteration: %d - Introduce some char..
 const char *text2 = " returned count: %d text is:\n";
 char received[80] = "\0";
 volatile unsigned long ul;
+uint8_t trans_id;
 
 	/* As per most tasks, this task is implemented in an infinite loop. */
 	int myiter;
 	int bufsz;
 	for( myiter = 0;;myiter++ )
 	{
-		if( done != 0 )
+		if( done == 0 ){ /* If Test 1 is not done, then wait */
+			while( xSemaphoreTake( sem_test1, ( portTickType ) 100 ) != pdTRUE ){}
+			xSemaphoreGive( sem_test1 );
+		}
+		/* Initiate the UART port to scan */
+		Printf_start( mainPort, mainBaurade);
+		/* Enable transaction mode */
+		trans_id = Printf_transactionOn();
+
+		char str[30];
+		Printf_print( mainPort, trans_id, str, text1, myiter );
+		/* Scan */
+		bufsz = Printf_scanf(mainPort, received, 4000);
+		received[bufsz] = '\n';  // End of line
+		received[bufsz + 1] = '\n';
+		received[bufsz + 2] = 0; // End of string
+		/* Show results */
+		Printf_print( mainPort, trans_id, str, text2, bufsz );
+		Printf_print( mainPort, trans_id, str, received);
+		/* Disable transaction mode */
+		Printf_transactionOff();
+
+		/* Delay for a period. */
+		for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
 		{
-			/* Initiate the UART port to scan */
-			printfStart(mainPort, mainBaurade);
-
-			char str[30];
-			printfPrint( str, text1, myiter );
-			/* Scan */
-			bufsz = printfScanscanf(received, 4000);
-			received[bufsz] = '\n';  // End of line
-			received[bufsz + 1] = 0; // End of string
-			/* Show results */
-			printfPrint( str, text2, bufsz );
-			printfPrint( str, received);
-
-			/* Delay for a period. */
-			for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
-			{
-				/* This loop is just a very crude delay implementation.  There is
-				nothing to do in here.  Later exercises will replace this crude
-				loop with a proper delay/sleep function. */
-			}
+			/* This loop is just a very crude delay implementation.  There is
+			nothing to do in here.  Later exercises will replace this crude
+			loop with a proper delay/sleep function. */
 		}
 	}
 }
@@ -226,22 +246,23 @@ volatile unsigned long ul;
 	int myiter;
 	for( myiter = 0;;myiter++ )
 	{
-		if( done != 0 ) /* If Test 1 is done, then... */
+		if( done == 0 ){ /* If Test 1 is not done, then wait */
+			while( xSemaphoreTake( sem_test1, ( portTickType ) 100 ) != pdTRUE ){}
+			xSemaphoreGive( sem_test1 );
+		}
+		/* Initiate the UART port to print */
+		Log_start(mainPort, mainBaurade);
+
+		/* Print out the name of this test using LOG. */
+		char str[30];
+		Log_log( str, pcTaskName, myiter );
+
+		/* Delay for a period. */
+		for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
 		{
-			/* Initiate the UART port to print */
-			logStart(mainPort, mainBaurade);
-
-			/* Print out the name of this test using LOG. */
-			char str[30];
-			logLog( str, pcTaskName, myiter );
-
-			/* Delay for a period. */
-			for( ul = 0; ul < mainDELAY_LOOP_COUNT; ul++ )
-			{
-				/* This loop is just a very crude delay implementation.  There is
-				nothing to do in here.  Later exercises will replace this crude
-				loop with a proper delay/sleep function. */
-			}
+			/* This loop is just a very crude delay implementation.  There is
+			nothing to do in here.  Later exercises will replace this crude
+			loop with a proper delay/sleep function. */
 		}
 	}
 }
