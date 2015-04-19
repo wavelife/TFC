@@ -6,12 +6,8 @@
 /* CLib includes */
 #include <stdint.h>
 #include <stdarg.h>
-#ifndef INC_FREERTOS_H
-	#include "FreeRTOS.h"
-#endif
-#ifndef TASK_H
-	#include "task.h"
-#endif
+#include "FreeRTOS.h"
+#include "task.h"
 /* to print using UART include */
 #include "printf.h"
 uint8_t uart_port = 3;

@@ -28,7 +28,7 @@ all: Example01.axf
 Example01.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"/Users/Carles/Documents/pfc/CMSISv2p00_LPC17xx/Debug" -L"/Users/Carles/Documents/pfc/FreeRTOS_Library/Debug" -Xlinker --gc-sections -Xlinker -Map=Example01.map -mcpu=cortex-m3 -mthumb -T "Example01_0_Debug.ld" -o "Example01.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -L"/Users/wavelife/Documents/UOC/TFC/pfc/CMSISv2p00_LPC17xx/Debug" -L"/Users/wavelife/Documents/UOC/TFC/pfc/FreeRTOS_Library/Debug" -Xlinker --gc-sections -Xlinker -Map=Example01.map -mcpu=cortex-m3 -mthumb -T "Example01_0_Debug.ld" -o "Example01.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
