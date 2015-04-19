@@ -87,10 +87,10 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
-					<fileInfo id="com.crt.advproject.config.exe.debug.818946559.233377951" name="printf.c" rcbsApplicability="disable" resourcePath="printf.c" toolsToInvoke="com.crt.advproject.gcc.exe.debug.1045201254.2009916745">
-						<tool id="com.crt.advproject.gcc.exe.debug.1045201254.2009916745" name="MCU C Compiler" superClass="com.crt.advproject.gcc.exe.debug.1045201254">
-							<option id="com.crt.advproject.gcc.exe.debug.option.optimization.level.231341961" name="Optimization Level" superClass="com.crt.advproject.gcc.exe.debug.option.optimization.level" value="gnu.c.optimization.level.none" valueType="enumerated"/>
-							<inputType id="com.crt.advproject.compiler.input.909628473" superClass="com.crt.advproject.compiler.input"/>
+					<fileInfo id="com.crt.advproject.config.exe.debug.818946559.767281306" name="printf.c" rcbsApplicability="disable" resourcePath="printf.c" toolsToInvoke="com.crt.advproject.gcc.exe.debug.1045201254.1495982458">
+						<tool id="com.crt.advproject.gcc.exe.debug.1045201254.1495982458" name="MCU C Compiler" superClass="com.crt.advproject.gcc.exe.debug.1045201254">
+							<option id="com.crt.advproject.gcc.exe.debug.option.optimization.level.658554149" superClass="com.crt.advproject.gcc.exe.debug.option.optimization.level" value="gnu.c.optimization.level.none" valueType="enumerated"/>
+							<inputType id="com.crt.advproject.compiler.input.294237793" superClass="com.crt.advproject.compiler.input"/>
 						</tool>
 					</fileInfo>
 				</configuration>

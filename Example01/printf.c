@@ -23,50 +23,69 @@ volatile uint32_t *lpc_uart_ier;
 volatile uint32_t *uart_count;
 volatile uint8_t *uart_buffer;
 uint8_t uart_port;
-uint32_t uart_baudrate = 9600;
 xSemaphoreHandle *xSemUART;
 xSemaphoreHandle xSemUART0 = NULL;
 xSemaphoreHandle xSemUART1 = NULL;
 xSemaphoreHandle xSemUART2 = NULL;
 xSemaphoreHandle xSemUART3 = NULL;
+xSemaphoreHandle transaction_sem = NULL;
+uint8_t transaction_mode = 0;
+uint8_t transaction_id = 255;
 
-void Printf_start( uint8_t  port, uint32_t baudrate){
-
-	/* opening port */
-	UARTInit(port, baudrate);
-	/* Setting global variables */
+/*
+ * Simple function to setup the pointer configuration.
+ * @precondition 	port must be a value between 0 and 3, otherwise must be considered as 3
+ *
+ * @param port  	Port to initialize the connection
+ */
+void Printf_conf ( uint8_t port ){
 	uart_port = port;
 	switch(port){
 	case 0: lpc_uart_ier = &LPC_UART0->IER;
 		uart_count = &UART0Count;
 		uart_buffer = &UART0Buffer;
-		uart_baudrate = baudrate;
 		xSemUART = &xSemUART0;
 		break;
 	case 1: lpc_uart_ier = &LPC_UART1->IER;
 		uart_count = &UART1Count;
 		uart_buffer = &UART1Buffer;
-		uart_baudrate = baudrate;
 		xSemUART = &xSemUART1;
 		break;
 	case 2: lpc_uart_ier = &LPC_UART2->IER;
 		uart_count = &UART2Count;
 		uart_buffer = &UART2Buffer;
-		uart_baudrate = baudrate;
 		xSemUART = &xSemUART2;
 		break;
 	default:
 	case 3: lpc_uart_ier = &LPC_UART3->IER;
 		uart_count = &UART3Count;
 		uart_buffer = &UART3Buffer;
-		uart_baudrate = baudrate;
 		xSemUART = &xSemUART3;
 		break;
 	}
-	/* Initiate the semphr */
-	if( *xSemUART == NULL) vSemaphoreCreateBinary( *xSemUART );
 }
 
+uint8_t Printf_start( uint8_t  port, uint32_t baudrate){
+	/* This is to prevent re-write configuration and initiate the semphr */
+	if( *xSemUART == NULL){
+		/* Setting global variables */
+		Printf_conf( port );
+		UARTInit(port, baudrate);
+		vSemaphoreCreateBinary( *xSemUART );
+		//if( transaction_sem == NULL) vSemaphoreCreateBinary( transaction_sem );
+		return 1;
+	}
+	else{
+		/* Setting global variables */
+		Printf_conf( port );
+		return 0;
+	}
+}
+
+void Printf_stop( uint8_t port){
+	Printf_conf( port );
+	*xSemUART = NULL;
+}
 
 /*
  * Simple function to write to the UART.
@@ -79,14 +98,14 @@ void Printf_start( uint8_t  port, uint32_t baudrate){
  */
 void printf_send(uint8_t port, char* str, int bufsz){
 
-	Printf_start(port, uart_baudrate);
+	if ( port != uart_port)
+		Printf_conf(port);
 
-	if( *xSemUART != NULL ){
+	if ( *xSemUART != NULL ){
 		if (bufsz > BUFSIZE) bufsz = BUFSIZE;			/* This is to prevent buffer overflow */
 
-		while( xSemaphoreTake( *xSemUART, ( portTickType ) 10 ) != pdTRUE ){}			/*  Wait and protect the function from other invocations */
+		while ( xSemaphoreTake( *xSemUART, ( portTickType ) 10 ) != pdTRUE ){}			/*  Wait and protect the function from other invocations */
 
-		*lpc_uart_ier = IER_THRE | IER_RLS;				/* Disable RBR */
 		UARTSend(uart_port, (uint8_t *)str , bufsz );
 		*uart_count = 0;
 		/* Give the Semphr and enable the function to others invocations */
@@ -94,20 +113,34 @@ void printf_send(uint8_t port, char* str, int bufsz){
 	}
 }
 
-void Printf_print( uint8_t port, char* str, const char* format, ... ){
+void Printf_print( uint8_t port, uint8_t trans_id, char* str, const char* format, ... ){
 	int bufsz;
-
 	va_list listPointer;
+	//va_list listPointerAux;
+
 	/* This is used to transmit the variable parameters */
 	va_start( listPointer, format );
+	/* Check if transaction mode is ON */
+	if ( transaction_mode != 0 ){
+		if ( trans_id != transaction_id){			/* If this invocation doesn't belongs from the transaction... */
+			while ( xSemaphoreTake( transaction_sem, ( portTickType ) 30 ) != pdTRUE ){}			/*  Wait until transaction finish */
+			xSemaphoreGive( transaction_sem );
+		}
+	}
 	bufsz = vsprintf(str, format, listPointer);
 	va_end( listPointer );
 	printf_send( port, str, bufsz);
 }
 
-void Printf_vsprint( uint8_t port, char* str, const char* format, va_list listPointer ){
+void Printf_vsprint( uint8_t port, uint8_t trans_id, char* str, const char* format, va_list listPointer ){
 	int bufsz;
-
+	/* Check if transaction mode is ON */
+	if ( transaction_mode != 0 ){
+		if ( trans_id != transaction_id){			/* If this invocation doesn't belongs from the transaction... */
+			while ( xSemaphoreTake( transaction_sem, ( portTickType ) 30 ) != pdTRUE ){}			/*  Wait until transaction finish */
+			xSemaphoreGive( transaction_sem );
+		}
+	}
 	bufsz = vsprintf(str, format, listPointer);
 	printf_send( port, str, bufsz);
 }
@@ -116,7 +149,8 @@ void Printf_vsprint( uint8_t port, char* str, const char* format, va_list listPo
 uint32_t Printf_scanf( uint8_t port, char* string, uint32_t timeout ){
 	uint32_t oldCount = 0, newCount = 0;
 
-	Printf_start( port, uart_baudrate );
+	if ( port != uart_port)
+		Printf_conf( port );
 
 	if( *xSemUART != NULL ){
 		while( xSemaphoreTake( *xSemUART, ( portTickType ) 10 ) != pdTRUE ){}			/* Wait and protect the function from other invocations */
@@ -130,7 +164,7 @@ uint32_t Printf_scanf( uint8_t port, char* string, uint32_t timeout ){
 			Printf_delayMs(5);
 			newCount = *uart_count;
 		}while( oldCount != newCount ); // wait a little time while we have new chars
-		*lpc_uart_ier = IER_THRE | IER_RLS; // disable interrupt RX UART
+			*lpc_uart_ier = IER_THRE | IER_RLS; // disable interrupt RX UART
 		if(newCount==0){
 			/* Give the Semphr and enable the function to others invocations */
 			xSemaphoreGive( *xSemUART );
@@ -147,6 +181,25 @@ uint32_t Printf_scanf( uint8_t port, char* string, uint32_t timeout ){
 		return newCount;
 	}
 	else return 0;
+}
+
+uint8_t Printf_transactionOn(){
+	if ( transaction_mode == 0 ){
+		if ( transaction_sem == NULL )
+			vSemaphoreCreateBinary( transaction_sem );
+		transaction_mode = 1;
+		xSemaphoreTake( transaction_sem, ( portTickType ) 30 );
+		transaction_id--;
+		if ( transaction_id < 100)
+			transaction_id = 255;
+		return transaction_id;
+	}
+	else return 0;
+}
+
+void Printf_transactionOff(){
+	if ( transaction_sem != NULL ) xSemaphoreGive( transaction_sem );
+	transaction_mode = 0;
 }
 
 void Printf_delayMs( uint32_t ms){
