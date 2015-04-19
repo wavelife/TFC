@@ -1,7 +1,0 @@
-20:57:03 **** Clean-only build of configuration Debug for project SimpleDemo ****
-make -r clean 
-rm -rf  ./cr_startup_lpc17.o ./main.o  ./cr_startup_lpc17.d ./main.d  SimpleDemo.axf
- 
-
-20:57:03 Build Finished (took 69ms)
-
