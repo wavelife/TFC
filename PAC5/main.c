@@ -182,7 +182,7 @@ char str[30];
 					}
 					xSemaphoreGive( xMutex );
 					/* Allow the sender task to execute. */
-					taskYIELD();
+					//taskYIELD();
 					xSemaphoreTake( xMutex, portMAX_DELAY );
 					break;
 				default: break;
